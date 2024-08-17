@@ -5,16 +5,14 @@ import React from "react";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 
 
 export const metadata: Metadata = {
   title: {
     default: "Streetvybz Entertainment",
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - sNext.js + NextUI`,
   },
-  description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
   },

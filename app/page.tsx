@@ -1,3 +1,10 @@
+import HeaderFooterWrapper from "@/components/UI/HeaderFooterWrapper";
+import Introduction from "@/app/HomeSections/Introduction";
+
 export default function Index() {
-  return <section />;
+  return (
+      <HeaderFooterWrapper>
+          <Introduction />
+      </HeaderFooterWrapper>
+  );
 }

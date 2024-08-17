@@ -1,69 +1,260 @@
-export type SiteConfig = typeof siteConfig;
-
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
+      id: 0,
       label: "Home",
       href: "/",
+      isBtn: false
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
+      id: 1,
+      label: "About Us",
       href: "/about",
+      isBtn: false
     },
+    {
+      id: 2,
+      label: "Entertainment",
+      href: "/entertainment",
+      subItems: [
+        {
+          id: 0,
+          title: "Weddings",
+          items: [
+            {
+              id: 0,
+              label: "Wedding DJ & MC Hire",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "• DJ Packages",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "MC Packages",
+              href: ""
+            },
+
+          ]
+        },
+        {
+          id: 1,
+          title: "School Events",
+          items: [
+            {
+              id: 0,
+              label: "Primary Discos",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "School Formals",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "High School Dances",
+              href: ""
+            },
+          ]
+        },
+        {
+          id: 2,
+          title: "Party Events",
+          items: [
+            {
+              id: 0,
+              label: "18th & 21st Birthdays",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "Party DJ Hire",
+              href: ""
+            },
+          ]
+        }
+      ]
+    },
+    {
+      id: 3,
+      label: "Corporate Events",
+      href: "/",
+      isBtn: false,
+      subItems: [
+        {
+          id: 0,
+          title: "Entertainment & FXs",
+          items: [
+            {
+              id: 0,
+              label: "Corporate DJs & Lighting",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "Indoor Fireworks",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "Low Fog Effect",
+              href: ""
+            },
+            {
+              id: 3,
+              label: "CO2 Gun",
+              href: ""
+            }
+          ]
+        },
+        {
+          id: 0,
+          title: "Corporate Event AV Hire",
+          items: [
+            {
+              id: 0,
+              label: "TV Screen Hire",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "PA System Hire",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "Microphone Hire",
+              href: ""
+            },
+            {
+              id: 3,
+              label: "Speaker Hire",
+              href: ""
+            },
+            {
+              id: 4,
+              label: "AV Technicians",
+              href: ""
+            },
+            {
+              id: 5,
+              label: "Stage Lighting",
+              href: ""
+            },
+
+          ]
+        }
+      ]
+    },
+    {
+      id: 4,
+      label: "Lighting and Effects",
+      href: "/",
+      isBtn: false,
+      subItems: [
+        {
+          id: 0,
+          title: "Dance Floor Hire",
+          items: [
+            {
+              id: 0,
+              label: "Starlight Dance Floor",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "Floor, Sparks & Cloud Combo",
+              href: ""
+            },
+          ]
+        },
+        {
+          id: 1,
+          title: "Special Effects",
+          items: [
+            {
+              id: 0,
+              label: "Sparkular Hire",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "Dancing on a Cloud",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "CO2 Gun",
+              href: ""
+            },
+          ]
+        },
+        {
+          id: 2,
+          title: "Event Lighting",
+          items: [
+            {
+              id: 0,
+              label: "All Lighting Options",
+              href: ""
+            },
+            {
+              id: 1,
+              label: "Uplighting",
+              href: ""
+            },
+            {
+              id: 2,
+              label: "Spot Lighting",
+              href: ""
+            },
+            {
+              id: 3,
+              label: "Moving Heads",
+              href: ""
+            },
+            {
+              id: 4,
+              label: "Mood Towers",
+              href: ""
+            },
+            {
+              id: 5,
+              label: "Party Lighting",
+              href: ""
+            },
+
+          ]
+        }
+      ]
+    },
+    {
+      id: 5,
+      label: "Our Events",
+      href: "/our-events",
+      isBtn: false,
+      subItems: [
+        {
+          id: 0,
+          title: "",
+          items: [
+            {
+              id: 0,
+              label: "",
+              href: ""
+            },
+          ]
+        }
+      ]
+    },
+    {
+      id: 6,
+      label: "Contact Us",
+      href: "/contact",
+      isBtn: true,
+    }
   ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
-  links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
-  },
 };

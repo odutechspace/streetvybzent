@@ -3,5 +3,17 @@
 @tailwind utilities;
 
 .x-pad {
-    padding: 0 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.xy-pad {
+    padding: 75px 28px;
+}
+.max-width {
+    max-width: 1320px;
+    width: 100%;
+}
+
+a:hover {
+    color: #e3ad65;
 }

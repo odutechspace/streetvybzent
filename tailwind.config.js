@@ -11,7 +11,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#e3ad65",
-        secondary: "#000"
+        secondary: "#000",
+        primary_text: "#CCCCCC",
+        gray_primary: "#777777",
+        footer_bg: "#252525"
       },
       keyframes: {
         fadeIn: {

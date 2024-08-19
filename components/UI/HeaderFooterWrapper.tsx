@@ -14,7 +14,6 @@ const HeaderFooterWrapper = (props: any) => {
         };
         const handleScroll = () => {
             setScrollDisplacement(window.scrollY);
-            console.log("displacement: ", window.scrollY);
         }
 
         handleResize();

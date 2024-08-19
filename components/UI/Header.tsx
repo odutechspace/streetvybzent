@@ -43,10 +43,10 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                             </>
                         :
                         <>
-                            <div className="h-[40px] p-0.5 rounded-2xl text-center flex justify-center items-center">
+                            <div className="h-[50px] p-1.5 rounded-2xl text-center flex justify-center items-center">
                                 <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
                             </div>
-                            <div className="flex flex-row gap-4 text-lg">
+                            <div className="flex flex-row gap-4 text-2xl">
                                 <FaBars />
                             </div>
                         </>

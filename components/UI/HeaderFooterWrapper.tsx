@@ -32,9 +32,10 @@ const HeaderFooterWrapper = (props: any) => {
     return (
         <div>
             {screenSize !== null && scrollDisplacement !== null &&
-                <Header screenSize={screenSize} scrollDisp={scrollDisplacement}/>}
+                <Header screenSize={screenSize} scrollDisp={scrollDisplacement}/>
+            }
             {props.children}
-            {screenSize !== null && <Footer/>}
+            <Footer/>
         </div>
     );
 }

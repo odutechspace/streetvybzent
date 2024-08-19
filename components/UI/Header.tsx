@@ -1,12 +1,9 @@
-'use client'
-
-import {FaSearch} from "react-icons/fa";
-import {FaBars, FaEnvelope, FaFacebookF, FaInstagram, FaPhone} from "react-icons/fa6";
+import {FaBars} from "react-icons/fa6";
 import {Button} from "@nextui-org/button";
+import Image from "next/image";
 
 import {siteConfig} from "@/config/site";
-
-
+import Socials from "@/components/UI/Socials";
 
 const Header = (props: {screenSize: number, scrollDisp: number}) => {
     const {screenSize, scrollDisp} = props;
@@ -24,44 +21,38 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
             }
         }
     );
-    const Socials = () => (
-        <div className="flex flex-row gap-4 text-lg">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaPhone />
-            <FaEnvelope />
-        </div>
-    );
 
   return (
-      <div className={`relative flex justify-center w-full  animate-fadeIn border-b-2`}>
+      <div className={`relative flex justify-center w-full  animate-fadeIn`}>
         <div className={`${scrollDisp > 0 ? "fixed bg-white text-secondary animate-fadeIn" : "absolute text-white"} flex w-full x-pad h-[${screenSize < 1000 ? "48" : "112"}px]`}>
             <div className="flex flex-row justify-between items-center w-full border-red-500 ">
                 {
                     (screenSize >= 1000 ) ?
-                        (screenSize >= 1200) ?
+                        (screenSize >= 1300) ?
                             <div className="flex items-center w-full h-[112px]">
                                 <Socials />
                             </div>
                             :
                             <>
-                                <p className="border-2 border-black/50 p-5 rounded-2xl">Logo</p>
+                                <div className="p-5 rounded-2xl">
+                                    <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
+                                </div>
                                 <div className="flex flex-row gap-8">
                                     <Socials />
-                                    <FaSearch className="text-lg"/>
                                 </div>
                             </>
                         :
                         <>
-                            <p className="border-2 border-black/50 h-[40px] px-2 rounded-2xl text-center flex justify-center items-center">Logo</p>
+                            <div className="h-[40px] p-0.5 rounded-2xl text-center flex justify-center items-center">
+                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
+                            </div>
                             <div className="flex flex-row gap-4 text-lg">
-                                <FaSearch />
                                 <FaBars />
                             </div>
                         </>
                 }
                 {
-                    (screenSize >= 1200) &&
+                    (screenSize >= 1300) &&
                     <>
                         <div className="absolute flex flex-row justify-center items-center gap-5 w-full font-bold">
                             {
@@ -69,7 +60,9 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                                     <p key={link?.id}>{link.label}</p>
                                 )
                             }
-                            <p className="border-2 border-black/50 p-5 rounded-2xl">Logo</p>
+                            <div className="p-5 rounded-2xl">
+                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
+                            </div>
                             {
                                 lastHalf?.map(link => (
                                         link?.isBtn ?
@@ -82,7 +75,6 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                                 )
                             }
                         </div>
-                        <FaSearch className="text-lg"/>
                     </>
                 }
             </div>

@@ -52,7 +52,7 @@ const Footer = () => {
                           <p className="text-medium">|</p>
                           <Link href={"/"} className="text-medium">Website Terms</Link>
                       </div>
-                      <p className="text-medium text-gray_primary">© {new Date(Date.now()).getFullYear()} G&M Streetvybz Entertainment.</p>
+                      <p className="text-medium text-gray_primary">© {new Date(Date.now()).getFullYear()} Streetvybz Entertainment.</p>
                   </div>
               </div>
           </div>

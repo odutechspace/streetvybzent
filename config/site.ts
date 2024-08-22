@@ -257,4 +257,12 @@ export const siteConfig = {
       isBtn: true,
     }
   ],
+  links: {
+    email: "info@streetvybzent.com",
+    phoneNo: "+254705050215",
+    twitter: "https://x.com/StreetVybzEnt",
+    facebook:"https://www.facebook.com/StreetVybzEntKe",
+    instagram:"https://www.instagram.com/streetvybzentke",
+    tiktok: "https://www.tiktok.com/@streetvybzent",
+  }
 };

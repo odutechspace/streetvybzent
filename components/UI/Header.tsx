@@ -23,7 +23,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
     );
 
   return (
-      <div className={`relative flex justify-center w-full  animate-fadeIn`}>
+      <div className={`relative flex justify-center w-full  animate-fadeIn z-40`}>
         <div className={`${scrollDisp > 0 ? "fixed bg-white text-secondary animate-fadeIn" : "absolute text-white"} flex w-full x-pad h-[${screenSize < 1000 ? "48" : "112"}px]`}>
             <div className="flex flex-row justify-between items-center w-full border-red-500 ">
                 {

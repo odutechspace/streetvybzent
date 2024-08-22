@@ -9,11 +9,23 @@
 .xy-pad {
     padding: 75px 28px;
 }
+@media (min-width: 768px) {
+    .x-pad {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .xy-pad {
+        padding: 100px 75px;
+    }
+}
 .max-width {
     max-width: 1320px;
     width: 100%;
 }
-
+.image_positioning {
+    background-size: cover;
+    background-position: center;
+}
 a:hover {
     color: #e3ad65;
 }

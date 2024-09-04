@@ -14,7 +14,7 @@ module.exports = {
         secondary: "#000",
         primary_text: "#CCCCCC",
         gray_primary: "#777777",
-        footer_bg: "#252525"
+        footer_bg: "#171616"
       },
       keyframes: {
         fadeIn: {

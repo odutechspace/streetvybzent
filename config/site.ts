@@ -8,12 +8,6 @@ export const siteConfig = {
     },
     {
       id: 1,
-      label: "About Us",
-      href: "/about",
-      isBtn: false
-    },
-    {
-      id: 2,
       label: "Entertainment",
       href: "/entertainment",
       subItems: [
@@ -79,7 +73,7 @@ export const siteConfig = {
       ]
     },
     {
-      id: 3,
+      id: 2,
       label: "Corporate Events",
       href: "/",
       isBtn: false,
@@ -148,6 +142,12 @@ export const siteConfig = {
           ]
         }
       ]
+    },
+    {
+      id: 3,
+      label: "About Us",
+      href: "/about",
+      isBtn: false
     },
     {
       id: 4,

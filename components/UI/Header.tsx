@@ -9,12 +9,12 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
     const {screenSize, scrollDisp} = props;
     const navItems = siteConfig.navItems;
     const length = navItems?.length;
-    const capFirstHalf = length/2;
+
     const firstHalf = new Array(0);
     const lastHalf = new Array(0);
 
     navItems.map((item, idx) => {
-            if (idx < capFirstHalf) {
+            if (idx < length/2-1) {
                 firstHalf.push(item);
             } else {
                 lastHalf.push(item);
@@ -28,9 +28,12 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
             <div className="flex flex-row justify-between items-center w-full border-red-500 ">
                 {
                     (screenSize >= 1000 ) ?
-                        (screenSize >= 1300) ?
-                            <div className="flex items-center w-full h-[112px]">
+                        (screenSize >= 1450) ?
+                            <div className="flex items-center justify-between w-full h-[112px]">
                                 <Socials />
+                                <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="text-white font-bold text-lg">
+                                    {lastHalf[lastHalf.length-1].label}
+                                </Button>
                             </div>
                             :
                             <>
@@ -52,7 +55,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                         </>
                 }
                 {
-                    (screenSize >= 1300) &&
+                    (screenSize >= 1450) &&
                     <>
                         <div className="absolute flex flex-row justify-center items-center gap-5 w-full font-bold">
                             {
@@ -65,12 +68,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                             </div>
                             {
                                 lastHalf?.map(link => (
-                                        link?.isBtn ?
-                                            <Button key={link?.id} variant={"solid"} color={"primary"} className="text-white font-bold">
-                                                {link.label}
-                                            </Button>
-                                            :
-                                            <p key={link?.id}>{link.label}</p>
+                                        (!link?.isBtn) && <p key={link?.id}>{link.label}</p>
                                     )
                                 )
                             }

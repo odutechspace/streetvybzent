@@ -11,10 +11,10 @@ const About = () => {
                   <div className="flex flex-col gap-5 text-lg">
                       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full">Who are Streetvybz Entertainment?</h2>
                       <p className="tracking-wide">
-                          At Streetvybz Entertainment, we’re the team that helps you create unforgettable events. We’re passionate about what we do and take pride in standing out from the usual DJ and AV companies. {"We're"} always pushing boundaries, constantly innovating, and ensuring that ALL our clients have the most memorable events.
+                          Welcome to Street Vybz Entertainment, your one-stop-shop for unforgettable events! {"We're"} a dynamic events management and planning agency specializing in providing top-notch audio-visual services, including sound systems, LED screens, deejays, emcees, décor, seating, stages, and lighting. With a focus on delivering exceptional experiences, we cater to a wide range of events, from corporate occasions to weddings, graduations, birthday parties, school functions, product launches, and team building activities.
                       </p>
                       <p className="tracking-wide">
-                          With talented DJs and MCs, cutting-edge lighting design, production, and special effects, our event portfolio includes numerous weddings, school events, corporate functions, and private gatherings. We are Streetvybz Entertainment, the full-service event company dedicated to making your event loved by EVERYONE.
+                          Our team of experts is dedicated to creating memorable events that exceed your expectations. With a passion for delivering exceptional service and attention to detail, we take care of every aspect of your event, ensuring a seamless and enjoyable experience for you and your guests. Let us handle the logistics, so you can focus on what matters most - enjoying the moment. At Street Vybz Entertainment, {"we're"} dedicated to making your event a night to remember.
                       </p>
                   </div>
               </div>

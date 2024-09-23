@@ -26,7 +26,7 @@ const Footer = () => {
                          width: "100%",
                          minWidth: "1580px"
                      }}
-                     strength={100}
+                     strength={150}
                      blur={1}
                  >
                      <div className="relative w-full">
@@ -63,20 +63,20 @@ const Footer = () => {
                          <div className="flex flex-col gap-2">
                              <h2>CONTACT</h2>
                              <div className="flex flex-col gap-0.5">
-                                 <Link href={"/"}>1300 736 233</Link>
-                                 <Link href={"/"}>info@gmeventgroup.com.au</Link>
-                                 <Link href={"/"}>Send us a Text Message</Link>
+                                 <Link href={`tel:${siteConfig.links.phoneNo}`}>+254 705 050 215</Link>
+                                 <Link href={`mailto: ${siteConfig.links.email}`}>info@streetvybzent.com</Link>
+                                 <Link href={`sms:${siteConfig.links.phoneNo}`}>Send us a Text Message</Link>
                              </div>
                          </div>
                          <div className="flex flex-col gap-2">
                              <h2>SOCIAL MEDIA</h2>
                              <div className="flex flex-row gap-4 text-xl">
                                  <div className="flex flex-row gap-4 text-[20px]">
-                                     <Link href={"/"}><FaFacebookF /></Link>
-                                     <Link href={"/"}><FaInstagram /></Link>
+                                     <Link href={siteConfig.links.facebook}><FaFacebookF /></Link>
+                                     <Link href={siteConfig.links.instagram}><FaInstagram /></Link>
                                      <Link href={"/"}><FaMixcloud /></Link>
-                                     <Link href={"/"}><FaPhone /></Link>
-                                     <Link href={"/"}><FaEnvelope /></Link>
+                                     <Link href={`tel:${siteConfig.links.phoneNo}`}><FaPhone /></Link>
+                                     <Link href={`mailto: ${siteConfig.links.email}`}><FaEnvelope /></Link>
                                  </div>
                              </div>
                          </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+
 import IntroSection from "@/app/services/sections/IntroSection";
 import services from "@/data/services.json";
 
@@ -22,12 +23,14 @@ const Service = ({params: { identity } } : { params: { identity: string } }) => 
     const service: Service = services.find((service: Service) => service.id === identity) ?? services[0];
     const images: string[] = service?.images ? service.images : [];
     const serviceItems: any = images.length === 0 ? service.serviceItems : new Array(1);
-    console.log("images.length > 0: ", images.length > 0);
+
     const ServiceItem = (props: any) => {
         const {id, title, description, image} = props;
+
         const imageStart = id % 2 === 0;
-        console.log("images.length > 0: ", images.length > 0);
+
         // ${id === 0 ? "py-24 lg:py-48" :  id === lastIdx ? "pt-12 pb-24 lg:pt-24 lg:pb-48" : "py-12 lg:py-24"}
+
         return (
             <div className={`x-pad flex justify-center 
                             py-24

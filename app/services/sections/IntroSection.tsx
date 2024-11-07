@@ -1,5 +1,6 @@
-import Introduction from "@/components/UI/Introduction";
 import Image from "next/image";
+
+import Introduction from "@/components/UI/Introduction";
 
 const IntroSection = (props: any) => {
 

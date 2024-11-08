@@ -6,6 +6,10 @@
     padding-left: 28px;
     padding-right: 28px;
 }
+.y-pad {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
 .xy-pad {
     padding: 75px 28px;
 }
@@ -13,6 +17,10 @@
     .x-pad {
         padding-left: 75px;
         padding-right: 75px;
+    }
+    .y-pad {
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     .xy-pad {
         padding: 100px 75px;

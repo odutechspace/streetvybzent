@@ -24,12 +24,12 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
 
   return (
       <div className={`relative flex justify-center w-full  animate-fadeIn z-40`}>
-        <div className={`${scrollDisp > 0 ? "fixed bg-white text-secondary shadow-md animate-fadeIn" : "absolute text-white"} flex w-full x-pad h-[${screenSize < 1000 ? "48" : "112"}px]`}>
-            <div className="flex flex-row justify-between items-center w-full border-red-500 ">
+        <div className={`${scrollDisp > 0 ? "fixed bg-white text-secondary shadow-md animate-fadeIn" : "absolute text-white"} flex w-full x-pad h-[${screenSize < 1000 ? "48" : "72"}px]`}>
+            <div className="flex flex-row justify-between items-center w-full ">
                 {
                     (screenSize >= 1000 ) ?
                         (screenSize >= 1450) ?
-                            <div className="flex items-center justify-between w-full h-[112px]">
+                            <div className="flex items-center justify-between w-full h-[92px]">
                                 <Socials />
                                 <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="text-white font-bold text-lg">
                                     {lastHalf[lastHalf.length-1].label}
@@ -37,8 +37,8 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                             </div>
                             :
                             <>
-                                <div className="p-5 rounded-2xl">
-                                    <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
+                                <div className=" rounded-2xl">
+                                    <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={20} className="h-full max-h-[72px] w-auto p-3"/>
                                 </div>
                                 <div className="flex flex-row gap-8">
                                     <Socials />
@@ -57,14 +57,14 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                 {
                     (screenSize >= 1450) &&
                     <>
-                        <div className="absolute flex flex-row justify-center items-center gap-5 w-full font-bold">
+                        <div className="absolute left-0 flex flex-row justify-center items-center gap-5 w-full h-full font-bold">
                             {
                                 firstHalf?.map(link =>
                                     <p key={link?.id}>{link.label}</p>
                                 )
                             }
                             <div className="p-5 rounded-2xl">
-                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
+                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={200} height={200} className="h-full w-auto"/>
                             </div>
                             {
                                 lastHalf?.map(link => (

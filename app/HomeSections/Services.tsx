@@ -1,68 +1,37 @@
 import Image from "next/image";
-import {FaMartiniGlassCitrus, FaRegHeart, FaRegLightbulb, FaRegStar} from "react-icons/fa6";
+import {FaRegHeart, FaRegStar} from "react-icons/fa6";
 import {BsFillLightningFill} from "react-icons/bs";
-import {CiCloudOn} from "react-icons/ci";
-import {HiUserGroup} from "react-icons/hi2";
-import {RiGraduationCapLine} from "react-icons/ri";
+import Link from "next/link";
 
 const services = [
     {
         id: 0,
-        name: "Wedding DJs & MC",
+        name: "EVENT LIGHTING",
         image: "mixer.jpg",
         icon: <FaRegHeart />,
-        href: ""
+        href: "/services/event-lighting"
     },
     {
         id: 1,
-        name: "Indoor Fireworks",
+        name: "TENTS",
         image: "mixer.jpg",
         icon: <BsFillLightningFill />,
-        href: ""
+        href: "/services/tents"
     },
     {
         id: 2,
-        name: "Starlight Dance Floor",
+        name: "SOUND",
         image: "mixer.jpg",
         icon: <FaRegStar />,
-        href: ""
+        href: "/services/sound"
     },
     {
         id: 3,
-        name: "Dancing on a Cloud",
+        name: "DJ & MC HIRE",
         image: "mixer.jpg",
-        icon: <CiCloudOn />,
-        href: ""
+        icon: <FaRegStar />,
+        href: "/services/sound"
     },
-    {
-        id: 4,
-        name: "Event Lighting and Design",
-        image: "mixer.jpg",
-        icon: <FaRegLightbulb />,
-        href: ""
-    },
-    {
-        id: 5,
-        name: "Corporate Events DJs",
-        image: "mixer.jpg",
-        icon: <FaMartiniGlassCitrus /> ,
-        href: ""
-    },
-    {
-        id: 6,
-        name: "Party Dj Hire",
-        image: "mixer.jpg",
-        icon: <HiUserGroup />,
-        href: ""
-    },
-    {
-        id: 7,
-        name: "School Formal DJs",
-        image: "mixer.jpg",
-        icon: <RiGraduationCapLine />,
-        href: ""
-    },
-
 ];
 const Services = () => {
   return (
@@ -74,15 +43,17 @@ const Services = () => {
 
                       {
                           services?.map(service =>
-                              <div key={service?.id} className="relative flex rounded-lg h-80 overflow-hidden">
-                                  <Image src="/home/services/mixer.jpg" alt="mixer" width={300} height={500} className="absolute w-full h-full z-10"/>
-                                  <div className="flex items-end w-full text-white bg-gradient-to-b from-black/5 to-70% to-black/30 p-5 z-20">
-                                      <div className="flex flex-col gap-5 text-4xl min-h-[50%]">
-                                          {service?.icon}
-                                          <p className="text-4xl font-semibold">{service?.name}</p>
+                              <Link href={service.href} key={service?.id}>
+                                  <div className="relative flex rounded-lg h-80 overflow-hidden">
+                                      <Image src="/home/services/mixer.jpg" alt="mixer" width={300} height={500} className="absolute w-full h-full z-10"/>
+                                      <div className="flex items-end w-full text-white bg-gradient-to-b from-black/5 to-70% to-black/30 p-5 z-20">
+                                          <div className="flex flex-col gap-5 text-4xl min-h-[50%]">
+                                              {service?.icon}
+                                              <p className="text-4xl font-semibold text-start">{service?.name}</p>
+                                          </div>
                                       </div>
                                   </div>
-                              </div>
+                              </Link>
                           )
                       }
                   </div>

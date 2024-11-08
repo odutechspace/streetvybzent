@@ -1,0 +1,81 @@
+[
+  {
+    "id": "event-lighting",
+    "title": "EVENT LIGHTING",
+    "image_bg": "event-lighting-bg.jpg",
+    "image_intro": "lighting-intro.jpg",
+    "description": [
+      "Lights add colour and class to your event. We offer Exceptional lighting solutions powered by high-quality effects and personalized service "
+    ],
+    "serviceItems": [
+      {
+        "id": 0,
+        "title": "PAR CAN LIGHTS",
+        "image": "pancan.jpeg",
+        "description": [
+          "Transform your event with our versatile LED par cans, perfect for uplighting or downlighting to create a stunning visual impact."
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Rent our compact LED",
+        "image": "compact-LED.png",
+        "description": [
+          "Moving heads to transform your event into a party! Bright, easy to use, and programmable: choose from fast, slow or sound-activated modes. Digital display makes selection a breeze."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tents",
+    "title": "TENTS",
+    "image_bg": "tents-bg.png",
+    "image_intro": "tents-intro.png",
+    "description": [
+      "Tents elevate venue spaces, adding sophistication and impressing guests. We offer a range of sizes and designs for any event."
+    ],
+    "serviceItems": [
+      {
+        "id": 0,
+        "title": "A-FRAME tents",
+        "image": "a-frame.png",
+        "description": [
+          "Offering modular A-Frame tents ranging from 10m to 60m, our tents come with customizable features like side-flaps, doors, and windows. With a sturdy construction and no center pole, our tents provide ample space and flexibility for various events and applications"
+        ]
+      },
+      {
+        "id": 1,
+        "title": "HEXAGON tents",
+        "image": "hexagon.png",
+        "description": [
+          "Elegant design and sturdy build: our hexagonal tents feature aluminum frames, PVC-coated polyester canopies, and various sizes to suit your event needs Stable and reliable, they provide a protected space for any occasion. Perfect for weddings, parties, outdoor gatherings, and more."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "DOME tents",
+        "image": "dome.png",
+        "description": [
+          "Event dome tents offer a unique alternative to traditional expo halls, providing an unparalleled sense of space and a distinguished venue through their distinctive shape and intricate framework.Their versatility and customizability make them ideal for various events, from corporate functions and weddings to festivals and exhibitions, offering a truly memorable experience for attendees."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sound",
+    "title": "SOUND",
+    "image_bg": "img.png",
+    "image_intro": "img.png",
+    "images": [
+      "s-a.png",
+      "s-b.png",
+      "s-d.png"
+    ],
+    "description": [
+      "From panels to ballrooms to outdoor events, Street Vybz Entertainment provides all the audio equipment you need, with customizable sound system rental packages and live production services.Whether you're hosting a small meeting or a large-scale event, our expert team will ensure your sound system meets your needs, providing clear and crisp audio for all attendees to enjoy.",
+      "Our comprehensive PA system includes high-quality for speakers, mixers, and microphones (wired, wireless, lapel, and headset options) for seamless sound solutions at events of all sizes. Ideal for receptions, conferences,weddings, graduation/birthday parties, corporate events,band showcases, and more, where sound quality meets visual appeal."
+    ],
+    "serviceItems": [
+    ]
+  }
+]

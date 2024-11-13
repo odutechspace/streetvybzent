@@ -7,28 +7,28 @@ const services = [
     {
         id: 0,
         name: "EVENT LIGHTING",
-        image: "mixer.jpg",
+        image: "event-lighting/lighting-intro.jpg",
         icon: <FaRegHeart />,
         href: "/services/event-lighting"
     },
     {
         id: 1,
         name: "TENTS",
-        image: "mixer.jpg",
+        image: "tents/tents-intro.png",
         icon: <BsFillLightningFill />,
         href: "/services/tents"
     },
     {
         id: 2,
         name: "SOUND",
-        image: "mixer.jpg",
+        image: "sound/s-intro2.png",
         icon: <FaRegStar />,
         href: "/services/sound"
     },
     {
         id: 3,
         name: "DJ & MC HIRE",
-        image: "mixer.jpg",
+        image: "sound/mixer.jpg",
         icon: <FaRegStar />,
         href: "/services/sound"
     },
@@ -45,7 +45,7 @@ const Services = () => {
                           services?.map(service =>
                               <Link href={service.href} key={service?.id}>
                                   <div className="relative flex rounded-lg h-80 overflow-hidden">
-                                      <Image src="/home/services/mixer.jpg" alt="mixer" width={300} height={500} className="absolute w-full h-full z-10"/>
+                                          <Image src={`/services/${service?.image}`} alt="mixer" width={300} height={500} className="absolute w-full h-full z-10"/>
                                       <div className="flex items-end w-full text-white bg-gradient-to-b from-black/5 to-70% to-black/30 p-5 z-20">
                                           <div className="flex flex-col gap-5 text-4xl min-h-[50%]">
                                               {service?.icon}

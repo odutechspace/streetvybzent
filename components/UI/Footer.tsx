@@ -33,8 +33,8 @@ const Footer = () => {
                          <div className="absolute  h-full bg-secondary/55 z-10 left-[-1000px] right-[-1000px]"/>
                          <div className="relative x-pad z-20 flex items-center flex-col gap-8 text-white w-full py-12 md:py-16 lg:py-36 text-center">
                              <h2 className="text-5xl lg:text-6xl xl:text-7xl">{"Let's"} Start This Party</h2>
-                             <p className="text-primary_text text-lg">Contact Us Today & Experience The Streetvybz Entertainment Difference.</p>
-                             <Button key={contactUs.id} variant={"solid"} color={"primary"} className="text-white font-bold text-xl">
+                             <p className="text-lg font-bold">Contact Us Today & Experience The Streetvybz Entertainment Difference.</p>
+                             <Button key={contactUs.id} variant={"solid"} color={"primary"} className="custom-btn !text-white font-bold text-xl">
                                  {contactUs.label}
                              </Button>
                          </div>

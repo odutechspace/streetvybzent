@@ -31,7 +31,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                         (screenSize >= 1450) ?
                             <div className="flex items-center justify-between w-full h-[92px]">
                                 <Socials />
-                                <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="text-white font-bold text-lg">
+                                <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="custom-btn text-white font-bold text-lg">
                                     {lastHalf[lastHalf.length-1].label}
                                 </Button>
                             </div>

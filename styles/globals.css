@@ -6,34 +6,55 @@
     padding-left: 28px;
     padding-right: 28px;
 }
+
 .y-pad {
     padding-top: 75px;
     padding-bottom: 75px;
 }
+
 .xy-pad {
     padding: 75px 28px;
 }
+
 @media (min-width: 768px) {
     .x-pad {
         padding-left: 75px;
         padding-right: 75px;
     }
+
     .y-pad {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
     .xy-pad {
         padding: 100px 75px;
     }
 }
+
 .max-width {
     max-width: 1320px;
     width: 100%;
 }
+
 .image_positioning {
     background-size: cover;
     background-position: center;
 }
+
 a:hover {
     color: #e3ad65;
+}
+
+/*#367E18 Green*/
+/*#F57328 Orange*/
+/*#FFE9A0 Yellow*/
+/*#CC3636 Red*/
+
+.custom-btn {
+    background-color: #FFE9A0;
+    /*box-shadow: 0 0 10px #fb9c07;*/
+    border-radius: 0px;
+    color: #000;
+    cursor: pointer !important;
 }

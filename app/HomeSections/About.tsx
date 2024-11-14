@@ -1,9 +1,10 @@
 import Image from "next/image";
+
 import FadeIn from "@/components/animations/FadeIn";
 
 const About = () => {
     return (
-        <section className="x-pad flex justify-center mt-24">
+        <section id="about" className="x-pad flex justify-center pt-24">
             <div className="max-width w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 w-full">
                     <FadeIn className="flex items-center">

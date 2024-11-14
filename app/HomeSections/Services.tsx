@@ -1,6 +1,5 @@
 import Image from "next/image";
-import {FaHeadphones, FaLightbulb, FaRegHeart, FaRegStar, FaSpeakerDeck, FaTents} from "react-icons/fa6";
-import {BsFillLightningFill} from "react-icons/bs";
+import {FaHeadphones, FaLightbulb, FaSpeakerDeck, FaTents} from "react-icons/fa6";
 import Link from "next/link";
 
 const services = [
@@ -35,7 +34,7 @@ const services = [
 ];
 const Services = () => {
   return (
-      <section className="xy-pad image_positioning flex justify-center bg-gray-50">
+      <section id="services" className="xy-pad image_positioning flex justify-center bg-gray-50">
           <div className="max-width w-full">
               <div className="flex flex-col items-center gap-20">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full md:max-w-[60%] text-center font-title uppercase">Reliable entertainment and innovative lighting options for events.</h2>

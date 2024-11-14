@@ -3,13 +3,13 @@ export const siteConfig = {
     {
       id: 0,
       label: "Home",
-      href: "/",
+      href: "/#",
       isBtn: false
     },
     {
       id: 1,
-      label: "Entertainment",
-      href: "/entertainment",
+      label: "Services",
+      href: "/#services",
       subItems: [
         {
           id: 0,
@@ -74,8 +74,8 @@ export const siteConfig = {
     },
     {
       id: 2,
-      label: "Corporate Events",
-      href: "/",
+      label: "DJ and MC Hire",
+      href: "/services/sound",
       isBtn: false,
       subItems: [
         {
@@ -146,13 +146,13 @@ export const siteConfig = {
     {
       id: 3,
       label: "About Us",
-      href: "/about",
+      href: "/#about",
       isBtn: false
     },
     {
       id: 4,
       label: "Lighting and Effects",
-      href: "/",
+      href: "/services/event-lighting",
       isBtn: false,
       subItems: [
         {
@@ -233,8 +233,8 @@ export const siteConfig = {
     },
     {
       id: 5,
-      label: "Our Events",
-      href: "/our-events",
+      label: "Events",
+      href: "/#",
       isBtn: false,
       subItems: [
         {
@@ -253,7 +253,7 @@ export const siteConfig = {
     {
       id: 6,
       label: "Contact Us",
-      href: "/contact",
+      href: "/#",
       isBtn: true,
     }
   ],

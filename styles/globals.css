@@ -78,7 +78,11 @@ a:hover {
 .custom-btn {
     background-color: #FFE9A0;
     /*box-shadow: 0 0 10px #fb9c07;*/
-    border-radius: 0px;
+    border-radius: 0;
     color: #000;
     cursor: pointer !important;
+}
+
+* {
+    scroll-behavior: smooth;
 }

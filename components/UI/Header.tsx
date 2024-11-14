@@ -63,7 +63,7 @@ const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: 
                         <div className="absolute left-0 flex flex-row justify-center items-center gap-5 w-full h-full font-light font-title">
                             {
                                 firstHalf?.map(link =>
-                                    <p key={link?.id}>{link.label}</p>
+                                    <Link key={link?.id} href={link?.href}>{link.label}</Link>
                                 )
                             }
                             <Link href={"/"} className={`rounded-full pl-4 pr-3 w-[100px] h-[100px] mt-4 flex justify-center items-center ${scrollDisp > 0 && "bg-white w-[80px] h-[80px] mt-4"}`}>
@@ -72,7 +72,7 @@ const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: 
                             </Link>
                             {
                                 lastHalf?.map(link => (
-                                        (!link?.isBtn) && <p key={link?.id}>{link.label}</p>
+                                        (!link?.isBtn) && <Link key={link?.id} href={link?.href}>{link.label}</Link>
                                     )
                                 )
                             }

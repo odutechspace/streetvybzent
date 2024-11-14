@@ -1,7 +1,9 @@
 import {FaXmark} from "react-icons/fa6";
+import Link from "next/link";
 
 import {siteConfig} from "@/config/site";
 import Socials from "@/components/UI/Socials";
+
 
 const Sidebar = ({isOpen = false, sidebarHandler} : {isOpen: boolean, sidebarHandler: any}) => {
 
@@ -14,11 +16,11 @@ const Sidebar = ({isOpen = false, sidebarHandler} : {isOpen: boolean, sidebarHan
                       <FaXmark onClick={sidebarHandler} className="text-danger hover:text-primary hover:cursor-pointer"/>
                   </div>
                   <div className="px-6 pt-6 flex flex-col gap-5">
-                      <p className="text-2xl font-semibold"><span className="text-[#]">Street</span><span>Vyb</span><span>z</span> Ent.</p>
+                      <p className="text-2xl font-bold font-title"><span className="text-green-600">Street</span><span className="text-orange-400">Vybz</span><span className="text-red-500"> Ent.</span></p>
                       <nav className="flex flex-col">
                           {
                               siteConfig.navItems.map(option =>
-                                  <p key={option.id}>{option.label}</p>
+                                  <Link key={option.id} className="font-title py-2" href={option.href} onClick={sidebarHandler}>{option.label}</Link>
                               )
                           }
 

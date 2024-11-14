@@ -33,7 +33,7 @@ const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: 
                         (screenSize >= 1450) ?
                             <div className="flex items-center justify-between w-full h-[92px]">
                                 <Socials />
-                                <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="text-white font-bold text-lg">
+                                <Button key={lastHalf.length-1} variant={"solid"} color={"primary"} className="custom-btn text-white font-bold text-lg">
                                     {lastHalf[lastHalf.length-1].label}
                                 </Button>
                             </div>
@@ -60,15 +60,16 @@ const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: 
                 {
                     (screenSize >= 1450) &&
                     <>
-                        <div className="absolute left-0 flex flex-row justify-center items-center gap-5 w-full h-full font-bold">
+                        <div className="absolute left-0 flex flex-row justify-center items-center gap-5 w-full h-full font-light font-title">
                             {
                                 firstHalf?.map(link =>
                                     <p key={link?.id}>{link.label}</p>
                                 )
                             }
-                            <div className="p-5 rounded-2xl">
-                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={200} height={200} className="h-full w-auto"/>
-                            </div>
+                            <Link href={"/"} className={`rounded-full pl-4 pr-3 w-[100px] h-[100px] mt-4 flex justify-center items-center ${scrollDisp > 0 && "bg-white w-[80px] h-[80px] mt-4"}`}>
+                                <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={200}
+                                       height={200} className="h-full w-auto object-contain"/>
+                            </Link>
                             {
                                 lastHalf?.map(link => (
                                         (!link?.isBtn) && <p key={link?.id}>{link.label}</p>

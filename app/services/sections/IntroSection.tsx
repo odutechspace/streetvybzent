@@ -8,10 +8,10 @@ const IntroSection = (props: any) => {
       <Introduction imageURL={`/services/${props.identity}/${props.image_bg}`}>
           <div className="flex flex-col lg:flex-row justify-between gap-20 text-white">
               <div className="flex flex-col gap-10 w-full text-lg text-white/95 justify-center">
-                  <h2 className="text-5xl lg:text-6xl xl:text-7xl text-white">{props.title}</h2>
+                  <h2 className="text-5xl lg:text-6xl xl:text-7xl text-white font-title">{props.title}</h2>
                   {
                       props.description.map((par: any, idx: number) =>
-                          <p key={idx}>{par}</p>
+                          <p key={idx} className="md:text-3xl font-light">{par}</p>
                       )
                   }
                   {/*<p>

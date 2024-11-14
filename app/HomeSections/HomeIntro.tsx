@@ -11,12 +11,12 @@ const HomeIntro = () => {
             <div
                 className="flex flex-col gap-5 w-full md:max-w-[70%] lg:max-w-[50%] text-white text-lg ">
                 <FadeIn delay={0.5}>
-                    <p><b>Streetvybz Entertainment.</b> DJs. <b>MCs.</b> Event Lighting. <b>AV Hire.</b> Special
+                    <p className="font-title"><b>Streetvybz Entertainment.</b> DJs. <b>MCs.</b> Event Lighting. <b>AV Hire.</b> Special
                         Effects.
                     </p>
                 </FadeIn>
                 <FadeIn>
-                    <h2 className="text-5xl lg:text-6xl xl:text-7xl">
+                    <h2 className="text-5xl 2xl:text-6xl font-title font-bold my-8">
                         We help you create the event everyone will love
                     </h2>
                 </FadeIn>

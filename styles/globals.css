@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*@font-face {*/
+/*    font-family: "Audiowide";*/
+/*    src: url("/fonts/Audiowide.ttf") format("ttf")*/
+/*}*/
+/*@layer base {*/
+/*    @font-face {*/
+/*        font-family: 'Audiowide';*/
+/*        font-style: normal;*/
+/*        font-weight: 400;*/
+/*        font-display: swap;*/
+/*        src: url(/fonts/Audiowide.ttf) format('ttf');*/
+/*    }*/
+/*}*/
 .x-pad {
     padding-left: 28px;
     padding-right: 28px;
@@ -14,6 +30,14 @@
 
 .xy-pad {
     padding: 75px 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-title;
+}
+
+.footer-icons{
+    @apply text-5xl border border-green-500 p-2 hover:text-green-500 cursor-pointer;
 }
 
 @media (min-width: 768px) {

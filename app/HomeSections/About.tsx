@@ -11,9 +11,9 @@ const About = () => {
                                className="h-auto w-full lg:h-full lg:w-auto object-cover"/>
                     </FadeIn>
                     <div className="flex flex-col gap-5 text-lg">
-                        <FadeIn delay={0.5}><h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full">Who are
-                            Streetvybz
-                            Entertainment?</h2>
+                        <FadeIn delay={0.5}>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full font-title">Who are
+                            Streetvybz Entertainment?</h2>
                         </FadeIn>
                         <FadeIn delay={1} className="tracking-wide">
                             Welcome to Street Vybz Entertainment, your one-stop-shop for unforgettable

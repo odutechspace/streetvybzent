@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        title: ['Audiowide', 'serif'],
+        body: ['Space Grotesk', 'sans-serif'],
+      },
       colors: {
         primary: "#e3ad65",
         secondary: "#000",

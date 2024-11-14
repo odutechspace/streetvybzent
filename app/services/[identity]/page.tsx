@@ -34,7 +34,7 @@ const Service = ({params: { identity } } : { params: { identity: string } }) => 
         return (
             <div className={`x-pad flex justify-center 
                             py-24
-                            ${imageStart ? "bg-[#F4F4F4]" : ""}`
+                            ${!imageStart ? "bg-[#F4F4F4]" : ""}`
                             }>
                 <div className="max-width w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 w-full">
@@ -51,7 +51,7 @@ const Service = ({params: { identity } } : { params: { identity: string } }) => 
                                         <Image src={`/services/${identity}/${image}`} alt="service item" width={800} height={1000} className=" w-full h-full"/>
                                     </div>
                                     <div className={`flex flex-col gap-5 text-lg justify-center ${imageStart ? "" : "lg:row-start-1"}`}>
-                                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full">{title}</h2>
+                                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full font-title uppercase">{title}</h2>
                                         {
                                             description.map((par: any, idx: number) =>
                                                 <p key={idx} className="tracking-wide" >{par}</p>

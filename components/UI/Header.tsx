@@ -1,12 +1,14 @@
 import {FaBars} from "react-icons/fa6";
 import {Button} from "@nextui-org/button";
 import Image from "next/image";
+import Link from "next/link";
 
 import {siteConfig} from "@/config/site";
 import Socials from "@/components/UI/Socials";
 
-const Header = (props: {screenSize: number, scrollDisp: number}) => {
-    const {screenSize, scrollDisp} = props;
+
+const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: any}) => {
+    const {screenSize, scrollDisp, sidebarHandler} = props;
     const navItems = siteConfig.navItems;
     const length = navItems?.length;
 
@@ -42,6 +44,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                                 </div>
                                 <div className="flex flex-row gap-8">
                                     <Socials />
+                                    <FaBars size={20} onClick={sidebarHandler} className="hover:text-primary hover:cursor-pointer"/>
                                 </div>
                             </>
                         :
@@ -50,7 +53,7 @@ const Header = (props: {screenSize: number, scrollDisp: number}) => {
                                 <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={500} height={500} className="h-full w-auto"/>
                             </div>
                             <div className="flex flex-row gap-4 text-2xl">
-                                <FaBars />
+                                <FaBars onClick={sidebarHandler} className="hover:text-primary hover:cursor-pointer"/>
                             </div>
                         </>
                 }

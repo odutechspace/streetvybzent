@@ -18,7 +18,7 @@
       },
       {
         "id": 1,
-        "title": "Rent our compact LED",
+        "title": "Compact LED",
         "image": "compact-LED.png",
         "description": [
           "Moving heads to transform your event into a party! Bright, easy to use, and programmable: choose from fast, slow or sound-activated modes. Digital display makes selection a breeze."
@@ -65,7 +65,7 @@
     "id": "sound",
     "title": "SOUND",
     "image_bg": "img.png",
-    "image_intro": "img.png",
+    "image_intro": "s-b.png",
     "images": [
       "s-a.png",
       "s-b.png",

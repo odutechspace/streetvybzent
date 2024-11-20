@@ -1,8 +1,11 @@
 "use client";
 import {Button} from "@nextui-org/button";
 import {FaArrowRightLong} from "react-icons/fa6";
+import Link from "next/link";
+
 import Introduction from "@/components/UI/Introduction";
 import FadeIn from "@/components/animations/FadeIn";
+
 
 const HomeIntro = () => {
 
@@ -21,7 +24,8 @@ const HomeIntro = () => {
                     </h2>
                 </FadeIn>
                 <FadeIn delay={1.5}>
-                    <Button className="custom-btn flex flex-row gap-2 font-bold w-fit text-lg"
+                    <Button as={Link} className="custom-btn flex flex-row gap-2 font-bold w-fit text-lg hover:text-primary hover:bg-black/70"
+                            href="/#services"
                             variant={"solid"}
                             endContent={<FaArrowRightLong/>}>
                         What we offer

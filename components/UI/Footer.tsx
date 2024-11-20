@@ -1,7 +1,7 @@
 'use client'
 
 import "./Footer.css";
-import {FaEnvelope, FaFacebookF, FaInstagram, FaPhone} from "react-icons/fa6";
+import {FaFacebookF, FaInstagram} from "react-icons/fa6";
 import {FaMixcloud} from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,8 +14,9 @@ const Footer = () => {
     const contactUs = navItems[navItems.length-1];
 
   return (
-     <footer>
+     <footer className="z-20 relative">
          <div className="relative flex flex-col items-center w-full">
+             <div className="absolute z-30 bg-black h-0.5 w-full" />
              <div className="relative flex w-full">
                  <Parallax
                      className="flex justify-center object-cover w-full"
@@ -42,7 +43,7 @@ const Footer = () => {
                  </Parallax>
              </div>
          </div>
-         <div className="flex flex-col bg-black ">
+         <div className="flex flex-col bg-black">
              <div className="w-full flex flex-col items-center">
                  <div className="xy-pad max-width flex flex-row justify-between gap-6 flex-wrap md:flex-nowrap text-primary_text">
                      <div className="h-[200px]">

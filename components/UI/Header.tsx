@@ -66,7 +66,7 @@ const Header = (props: {screenSize: number, scrollDisp: number, sidebarHandler: 
                                     <Link key={link?.id} href={link?.href}>{link.label}</Link>
                                 )
                             }
-                            <Link href={"/"} className={`rounded-full pl-4 pr-3 w-[100px] h-[100px] mt-4 flex justify-center items-center ${scrollDisp > 0 && "bg-white w-[80px] h-[80px] mt-4"}`}>
+                            <Link href={"/"} className={`rounded-full pl-4 pr-3 pt-2 w-[100px] h-[100px] mt-4 flex justify-center items-center ${scrollDisp > 0 && "bg-white w-[80px] h-[80px] mt-4"}`}>
                                 <Image src="/logo/logo-without-bg-2.png" alt="streetvybz logo" width={200}
                                        height={200} className="h-full w-auto object-contain"/>
                             </Link>

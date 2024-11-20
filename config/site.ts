@@ -253,7 +253,7 @@ export const siteConfig = {
     {
       id: 6,
       label: "Contact Us",
-      href: "/#",
+      href: "/contact-us",
       isBtn: true,
     }
   ],

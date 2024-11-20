@@ -31,6 +31,9 @@
 .xy-pad {
     padding: 75px 28px;
 }
+.xy-pad--2 {
+    padding: 75px 28px;
+}
 
 h1, h2, h3, h4, h5, h6 {
     @apply font-title;
@@ -38,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-icons{
     @apply text-5xl border border-green-500 p-2 hover:text-green-500 cursor-pointer;
+}
+@media (max-width: 648px) {
+    .xy-pad--2 {
+        padding: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -52,6 +60,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .xy-pad {
+        padding: 100px 75px;
+    }
+    .xy-pad--2 {
         padding: 100px 75px;
     }
 }

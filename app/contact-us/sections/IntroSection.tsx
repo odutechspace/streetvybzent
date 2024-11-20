@@ -1,6 +1,6 @@
 "use client";
 
-import {FaEnvelope, FaFacebookF, FaInstagram, FaPhone, FaXTwitter} from "react-icons/fa6";
+import {FaEnvelope, FaFacebookF, FaInstagram, FaLocationDot, FaPhone, FaXTwitter} from "react-icons/fa6";
 import Link from "next/link";
 import {Input, Textarea} from "@nextui-org/input";
 import {Button} from "@nextui-org/button";
@@ -13,20 +13,23 @@ const IntroSection = () => {
     const {links} = siteConfig;
 
     return (
-        <Introduction imageURL="/contact/contact-us-bg-dark.png" isFullHeight={true}>
-            <div className=" bg-black/50 lg:p-6 backdrop-blur-[2px] rounded-md overflow-hidden">
+        <Introduction imageURL="/contact/contact-us-bg-dark.png" isFullHeight={true} xyPadVariant={"xy-pad--2"}>
+            <div className=" bg-black/50 lg:p-6 backdrop-blur-[2px] sm:rounded-md overflow-hidden">
                 <div className="flex flex-col lg:flex-row gap-x-20 gap-y-6 w-full text-white/70">
-                    <div className="w-full flex flex-col gap-6 p-6 lg:p-0 justify-between">
+                    <div className="w-full flex flex-col gap-6 px-6 pt-20 sm:p-6 lg:p-0 justify-between">
                         <h2 className="text-3xl 2xl:text-4xl font-title font-bold text-white/85">CONTACT US</h2>
                         <p>
                             Planning an event or looking for unforgettable experiences?
                             {"Let's"} make it extraordinary! Reach out to us today and let’s bring your vision to life with creativity and passion.
                             Start the journey here!
                         </p>
-                        <div className="flex flex-col gap-6">
-                            <h2 className="text-3xl 2xl:text-4xl font-title font-bold text-white/85">Nairobi</h2>
-                            <div className="flex flex-col gap-2">
-                                <Link href={`tel:${links?.phoneNo}`} className="flex flex-row items-center gap-2">
+                        <div className="flex flex-col">
+                            <div className="flex flex-col gap-2 text-white/85">
+                                <div className="flex flex-row items-center gap-2">
+                                    <FaLocationDot size={18}/>
+                                    <p>Nairobi, Kenya</p>
+                                </div>
+                                 <Link href={`tel:${links?.phoneNo}`} className="flex flex-row items-center gap-2">
                                     <FaPhone size={18}/>
                                     <p>{links.phoneNo}</p>
                                 </Link>
@@ -51,7 +54,7 @@ const IntroSection = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-full p-6 bg-[#111111] lg:rounded-md flex flex-col gap-6 lg:min-w-[450px]">
+                    <div className="w-full px-6 pb-20 pt-6 sm:p-6 bg-[#111111] lg:rounded-md flex flex-col gap-6 lg:min-w-[450px]">
                         <h2 className="text-3xl 2xl:text-4xl font-title font-bold text-white/85 text-center">Got Any Questions ?</h2>
                         <form className="flex flex-col gap-4 justify-between h-full">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

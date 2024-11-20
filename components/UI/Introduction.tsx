@@ -1,11 +1,12 @@
 
 
 const Introduction = (props: any) => {
-    const fullHeight = props?.isFullHeight ? "lg:h-[100vh]" : "";
+    const fullHeight = props?.isFullHeight ? "" : "";
+    const xyPad = props?.xyPadVariant ?? "xy-pad";
 
     return (
         <section className="w-full bg-black">
-            <div className={`xy-pad image_positioning ${fullHeight} relative bg-black/60 z-30`}
+            <div className={`${xyPad} image_positioning ${fullHeight} relative bg-black/60 z-30`}
                  style={{
                      backgroundImage: `url(${props.imageURL})`,
                  }}

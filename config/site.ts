@@ -151,7 +151,7 @@ export const siteConfig = {
     },
     {
       id: 4,
-      label: "Lighting and Effects",
+      label: "Event Lighting",
       href: "/services/event-lighting",
       isBtn: false,
       subItems: [

@@ -20,10 +20,11 @@ const Footer = () => {
              <div className="relative flex w-full">
                  <Parallax
                      className="flex justify-center object-cover w-full"
-                     bgImage="./footer/streetvybz-footer.png"
+                     // bgImage="./footer/streetvybz-footer.png"
+                     bgImage="./footer/footer-samp-2.jpg"
                      bgImageStyle={{
                          backgroundSize: 'auto 100%',
-                         backgroundPosition: 'center center',
+                         backgroundPosition: 'center bottom',
                          width: "100%",
                          minWidth: "1580px"
                      }}

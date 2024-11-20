@@ -13,7 +13,7 @@ const IntroSection = () => {
     const {links} = siteConfig;
 
     return (
-        <Introduction imageURL="/contact/contact-us-bg-dark.png" isFullHeight={true} xyPadVariant={"xy-pad--2"}>
+        <Introduction imageURL="/contact/contact-us-bg-dark.png" xyPadVariant={"xy-pad--2"}>
             <div className=" bg-black/50 lg:p-6 backdrop-blur-[2px] sm:rounded-md overflow-hidden">
                 <div className="flex flex-col lg:flex-row gap-x-20 gap-y-6 w-full text-white/70">
                     <div className="w-full flex flex-col gap-6 px-6 pt-20 sm:p-6 lg:p-0 justify-between">

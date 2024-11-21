@@ -234,7 +234,7 @@ export const siteConfig = {
     {
       id: 5,
       label: "Events",
-      href: "/#",
+      href: "/events",
       isBtn: false,
       subItems: [
         {

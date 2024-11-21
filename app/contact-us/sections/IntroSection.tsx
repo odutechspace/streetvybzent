@@ -54,7 +54,7 @@ const IntroSection = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-full px-6 pb-20 pt-6 sm:p-6 bg-[#111111] lg:rounded-md flex flex-col gap-6 lg:min-w-[450px]">
+                    <div className="w-full px-6 pb-20 pt-6 sm:p-6 bg-footer_bg lg:rounded-md flex flex-col gap-6 lg:min-w-[450px]">
                         <h2 className="text-3xl 2xl:text-4xl font-title font-bold text-white/85 text-center">Got Any Questions ?</h2>
                         <form className="flex flex-col gap-4 justify-between h-full">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -100,7 +100,14 @@ a:hover {
     cursor: pointer !important;
     color: white;
 }
-
+.event--sign {
+    font-size: 18px;
+}
+@media (min-width: 450px) {
+    .event--sign {
+        font-size: 13px;
+    }
+}
 * {
     scroll-behavior: smooth;
 }

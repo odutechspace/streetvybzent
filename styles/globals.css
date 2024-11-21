@@ -40,8 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-icons{
-    @apply text-5xl border border-green-500 p-2 hover:text-green-500 cursor-pointer;
+    @apply text-4xl hover:text-primary cursor-pointer bg-gray-700 p-2;
 }
+
+
+.sidebar-icon-cont a {
+    @apply text-sm hover:text-primary cursor-pointer bg-gray-400 p-2 text-white;
+}
+
 @media (max-width: 648px) {
     .xy-pad--2 {
         padding: 0;
@@ -87,13 +93,21 @@ a:hover {
 /*#CC3636 Red*/
 
 .custom-btn {
-    background-color: #FFE9A0;
+    /*background-color: #FFE9A0;*/
+    background-color: #ff0000;
     /*box-shadow: 0 0 10px #fb9c07;*/
     border-radius: 0;
-    color: #000;
     cursor: pointer !important;
+    color: white;
 }
-
+.event--sign {
+    font-size: 18px;
+}
+@media (min-width: 450px) {
+    .event--sign {
+        font-size: 13px;
+    }
+}
 * {
     scroll-behavior: smooth;
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import {FaRegCalendarAlt} from "react-icons/fa";
 import {FaLocationDot} from "react-icons/fa6";
 import {Button} from "@nextui-org/button";
+import {HiAtSymbol} from "react-icons/hi";
 
 const EventCard = () => {
     return (
@@ -22,7 +23,7 @@ const EventCard = () => {
                             <span className="font-medium">SYDNEY, AUSTRALIA</span>
                         </div>
                             <p className="text-lg md:text-xl flex flex-wrap items-end">
-                                <span className="text-[12px] sm:text-[13px] uppercase text-white/75 flex flex-row gap-x-2"><span className="event--sign">@</span>Rio Costa Palace Club</span>
+                                <span className="text-[12px] sm:text-[13px] uppercase text-white/75 flex flex-row items-center gap-x-2"><span className="event--sign"><HiAtSymbol /></span>Rio Costa Palace Club</span>
                             </p>
                     </div>
                     <p className="text-white/75 text-medium">

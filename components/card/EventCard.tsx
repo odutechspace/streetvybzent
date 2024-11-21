@@ -5,7 +5,7 @@ import {Button} from "@nextui-org/button";
 
 const EventCard = () => {
     return (
-        <div className="flex flex-col lg:flex-row justify-between gap-12 bg-white/5 p-6">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 bg-white/5 p-4 sm:p-6">
             <div className="h-auto w-full lg:order-2">
                 <Image src="/events/events-samp.jpg" alt="event-bg-image" height={500} width={500} className="h-auto w-full lg:h-full lg:w-auto object-cover" />
             </div>

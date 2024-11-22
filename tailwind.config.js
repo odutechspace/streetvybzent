@@ -19,6 +19,7 @@ module.exports = {
         secondary: "#000",
         primary_text: "#CCCCCC",
         gray_primary: "#777777",
+        gray_bg: "#F6F6F6",
         footer_bg: "#111111"
       },
       keyframes: {

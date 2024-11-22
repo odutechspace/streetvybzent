@@ -3,6 +3,7 @@ import {FaRegCalendarAlt} from "react-icons/fa";
 import {FaLocationDot} from "react-icons/fa6";
 import {Button} from "@nextui-org/button";
 import {HiAtSymbol} from "react-icons/hi";
+import Link from "next/link";
 
 const EventCard = () => {
     return (
@@ -31,8 +32,12 @@ const EventCard = () => {
                         Our a bring herb. Heaven together. A, blessed upon greater seed. Set {"Don't"}. Behold fish make said divided moved air in unto.
                     </p>
                     <div className="flex flex-row flex-wrap gap-4">
-                        <Button radius={'sm'} size={"sm"} className="bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit"><p className="text-medium">VIEW DETAILS</p></Button>
-                        <Button radius={'sm'} size={"sm"} className="bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit"><p className="text-medium">BOOK TICKETS</p></Button>
+                        <Button as={Link} href={"events/my-event"} radius={'sm'} size={"sm"} className="bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                            <p className="text-medium">VIEW DETAILS</p>
+                        </Button>
+                        <Button radius={'sm'} size={"sm"} className="bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                            <p className="text-medium">BOOK TICKETS</p>
+                        </Button>
                     </div>
                 </div>
             </div>

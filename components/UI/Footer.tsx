@@ -21,7 +21,7 @@ const Footer = () => {
                  <Parallax
                      className="flex justify-center object-cover w-full"
                      // bgImage="./footer/streetvybz-footer.png"
-                     bgImage="./footer/footer-samp-2.jpg"
+                     bgImage="footer/footer-samp-2.jpg"
                      bgImageStyle={{
                          backgroundSize: 'auto 100%',
                          backgroundPosition: 'center bottom',

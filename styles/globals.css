@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-4xl hover:text-primary cursor-pointer bg-gray-700 p-2;
 }
 
+.event-share-icons {
+    @apply text-2xl text-gray-700 hover:text-white/85 rounded-md hover:bg-primary cursor-pointer bg-gray-700/20 p-2;
+}
+
 
 .sidebar-icon-cont a {
     @apply text-sm hover:text-primary cursor-pointer bg-gray-400 p-2 text-white;
@@ -103,9 +107,14 @@ a:hover {
 .event--sign {
     font-size: 18px;
 }
+div p {
+    .event--text-sz {
+        font-size: 15px;
+    }
+}
 @media (min-width: 450px) {
     .event--sign {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 * {

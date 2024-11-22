@@ -21,5 +21,3 @@ const Events = () => {
 }
 
 export default Events;
-
-// left - max-width = 3/4, right max-width= 370px height= auto

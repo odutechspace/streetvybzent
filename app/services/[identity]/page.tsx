@@ -29,7 +29,6 @@ const Service = ({params: { identity } } : { params: { identity: string } }) => 
 
         const imageStart = id % 2 === 0;
 
-        // ${id === 0 ? "py-24 lg:py-48" :  id === lastIdx ? "pt-12 pb-24 lg:pt-24 lg:pb-48" : "py-12 lg:py-24"}
 
         return (
             <div className={`x-pad flex justify-center 

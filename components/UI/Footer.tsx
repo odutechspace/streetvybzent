@@ -59,12 +59,6 @@ const Footer = () => {
                                          <li key={item.id}><Link href={item.href}>{item.label}</Link></li>
                                      )
                                  }
-                                 {/*<li><Link href={"/"}>Home</Link></li>
-                                 <li><Link href={"/"}>About Us</Link></li>
-                                 <li><Link href={"/"}>Entertainment</Link></li>
-                                 <li><Link href={"/"}>Corporate Events</Link></li>
-                                 <li><Link href={"/"}>Lighting and Effects</Link></li>
-                                 <li><Link href={"/"}>Our Events</Link></li>*/}
                              </ul>
                          </div>
                          <div className="flex flex-col gap-2">

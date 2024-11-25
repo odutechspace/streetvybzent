@@ -32,11 +32,11 @@ const EventCard = () => {
                         Our a bring herb. Heaven together. A, blessed upon greater seed. Set {"Don't"}. Behold fish make said divided moved air in unto.
                     </p>
                     <div className="flex flex-row flex-wrap gap-4">
-                        <Button as={Link} href={"events/my-event"} radius={'sm'} size={"sm"} className="bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
-                            <p className="text-medium">VIEW DETAILS</p>
+                        <Button as={Link} href={"events/my-event"} radius={'sm'} size={"sm"} className="custom-btn--2 bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                            View Details
                         </Button>
-                        <Button radius={'sm'} size={"sm"} className="bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
-                            <p className="text-medium">BOOK TICKETS</p>
+                        <Button radius={'sm'} size={"sm"} className="custom-btn--2 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                            Book Tickets
                         </Button>
                     </div>
                 </div>

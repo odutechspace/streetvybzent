@@ -104,6 +104,12 @@ a:hover {
     cursor: pointer !important;
     color: white;
 }
+.custom-btn--2 {
+    border-radius: 0;
+    cursor: pointer !important;
+    color: white;
+}
+
 .event--sign {
     font-size: 18px;
 }

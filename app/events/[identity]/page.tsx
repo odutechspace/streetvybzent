@@ -12,7 +12,7 @@ import EventDetailsItemCard from "@/components/card/EventDetailsItemCard";
 
 
 const Events = ({params: {identity}} : { params: { identity: string }}) => {
-    console.log("identity: ", identity);
+    //console.log("identity: ", identity);
 
     return (
         <>
@@ -20,7 +20,7 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                 <div className="flex flex-col gap-8 py-8">
                     <h2 className="text-[40px] sm:text-5xl 2xl:text-6xl font-title font-bold text-white/85">TRΔP TOUR</h2>
                     <p className="text-white/75">23-25 August 2027 @The times center Mahattan New</p>
-                    <TimePending />
+                    <TimePending/>
                 </div>
             </Introduction>
             <div className="xy-pad flex justify-center bg-gray_bg">

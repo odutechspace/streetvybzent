@@ -9,13 +9,13 @@ import SocialsShare from "@/components/UI/SocialsShare";
 import EventDetailsItemCard from "@/components/card/EventDetailsItemCard";
 import events from "@/data/events.json";
 import {monthIndexToNameMapper} from "@/_helpers/TimeUtil";
-import {EventData, EventDate} from "@/components/card/EventCard";
-import Footer from "@/components/UI/Footer";
+import {EventData, EventDate, EventLocation} from "@/components/card/EventCard";
 
 
 const Events = ({params: {identity}} : { params: { identity: string }}) => {
     const selectedEvent = events.find((event: EventData) => event.id === identity);
-    const {year, month, day}: EventDate = selectedEvent?.date ?? {year: 0, month: 0, day: 0, hour: 0, minute: 0,second: 0};
+    const {year, month, day, hour, minute}: EventDate = selectedEvent?.date ?? {year: 0, month: 0, day: 0, hour: 0, minute: 0,second: 0};
+    const {country, city, venue}: EventLocation = selectedEvent?.location ?? {country: "N/A", city: "N/A", venue: "N/A"}
 
     return (
         <>
@@ -92,10 +92,12 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                         </div>
                         <div className="p-6">
                             <div className="flex flex-col">
-                                <EventDetailsItemCard title={"Date"} value={"January 17, 2023 12:00 pm"} Icon={FaRegCalendarAlt}/>
-                                <EventDetailsItemCard title={"Location"} value={"236156, Megeve, France"} Icon={FaLocationDot}/>
-                                <EventDetailsItemCard title={"Venue"} value={"Megeve"} Icon={MdMapsHomeWork}/>
-                                <EventDetailsItemCard title={"Price"} value={"Ksh. 150"} Icon={FaMoneyCheckAlt} isLast={true}/>
+                                <EventDetailsItemCard title={"Date"}
+                                                      value={`${monthIndexToNameMapper(month)} ${day}, ${year} ${hour > 12 && hour-12}:${minute} ${hour > 11 ? "pm" : "am"}`}
+                                                      Icon={FaRegCalendarAlt}/>
+                                <EventDetailsItemCard title={"Location"} value={`${city}, ${country}`} Icon={FaLocationDot}/>
+                                <EventDetailsItemCard title={"Venue"} value={venue} Icon={MdMapsHomeWork}/>
+                                <EventDetailsItemCard title={"Price"} value={`Ksh. ${selectedEvent?.price}`} Icon={FaMoneyCheckAlt} isLast={true}/>
                             </div>
                         </div>
                     </div>
@@ -106,3 +108,4 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
 }
 
 export default Events;
+// "January 17, 2023 12:00 pm"

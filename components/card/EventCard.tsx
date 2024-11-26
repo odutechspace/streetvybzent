@@ -24,6 +24,7 @@ export interface EventData {
     id: string,
     title: string,
     date: EventDate,
+    price: number,
     location: EventLocation,
     summary: string,
     description: string[]
@@ -48,7 +49,7 @@ const EventCard = ({id, title, date, location, summary}: EventData) => {
                             <span className="font-medium">{`${location.city}, ${location.country}`}</span>
                         </div>
                             <p className="text-lg md:text-xl flex flex-wrap items-end">
-                                <span className="text-[12px] sm:text-[13px] uppercase text-white/75 flex flex-row items-center gap-x-2"><span className="event--sign"><HiAtSymbol /></span>Rio Costa Palace Club</span>
+                                <span className="text-[12px] sm:text-[13px] uppercase text-white/75 flex flex-row items-center gap-x-2"><span className="event--sign"><HiAtSymbol /></span>{location.venue}</span>
                             </p>
                     </div>
                     <p className="text-white/75 text-medium">{summary}</p>

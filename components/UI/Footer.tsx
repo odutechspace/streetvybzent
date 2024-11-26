@@ -1,4 +1,5 @@
-'use client'
+
+'use client';
 
 import "./Footer.css";
 import {FaFacebookF, FaInstagram} from "react-icons/fa6";
@@ -7,41 +8,53 @@ import Link from "next/link";
 import Image from "next/image";
 import {Button} from "@nextui-org/button";
 import { Parallax} from "react-parallax";
+import {useEffect} from "react";
 
 import {siteConfig} from "@/config/site";
+
 const Footer = () => {
     const navItems = siteConfig.navItems;
     const contactUs = navItems[navItems.length-1];
+
+    const MyParallax = () => {
+        return (
+            <Parallax
+                className="flex justify-center object-cover w-full"
+                bgImage="footer/footer-samp-2.jpg"
+                bgImageStyle={{
+                    backgroundSize: 'auto 100%',
+                    backgroundPosition: 'center bottom',
+                    width: "100%",
+                    minWidth: "1580px"
+                }}
+                strength={150}
+                blur={1}>
+                <div className="relative w-full">
+                    <div className="absolute  h-full bg-secondary/55 z-10 left-[-1000px] right-[-1000px]"/>
+                    <div
+                        className="relative x-pad z-20 flex items-center flex-col gap-8 text-white w-full py-12 md:py-16 lg:py-36 text-center">
+                        <h2 className="text-5xl lg:text-6xl xl:text-7xl font-title">{"Let's"} Start This Party</h2>
+                        <p className="text-lg md:text-2xl font-bold">Contact Us Today & Experience The Streetvybz
+                            Entertainment Difference.</p>
+                        <Button key={contactUs.id} variant={"solid"} color={"primary"}
+                                className="custom-btn font-bold text-xl">
+                            {contactUs.label}
+                        </Button>
+                    </div>
+                </div>
+            </Parallax>
+            )
+    };
+
+    useEffect(() => {
+    }, [MyParallax]);
 
   return (
      <footer className="z-20 relative">
          <div className="relative flex flex-col items-center w-full">
              <div className="absolute z-30 bg-black h-0.5 w-full" />
              <div className="relative flex w-full">
-                 <Parallax
-                     className="flex justify-center object-cover w-full"
-                     // bgImage="./footer/streetvybz-footer.png"
-                     bgImage="footer/footer-samp-2.jpg"
-                     bgImageStyle={{
-                         backgroundSize: 'auto 100%',
-                         backgroundPosition: 'center bottom',
-                         width: "100%",
-                         minWidth: "1580px"
-                     }}
-                     strength={150}
-                     blur={1}
-                 >
-                     <div className="relative w-full">
-                         <div className="absolute  h-full bg-secondary/55 z-10 left-[-1000px] right-[-1000px]"/>
-                         <div className="relative x-pad z-20 flex items-center flex-col gap-8 text-white w-full py-12 md:py-16 lg:py-36 text-center">
-                             <h2 className="text-5xl lg:text-6xl xl:text-7xl font-title">{"Let's"} Start This Party</h2>
-                             <p className="text-lg md:text-2xl font-bold">Contact Us Today & Experience The Streetvybz Entertainment Difference.</p>
-                             <Button key={contactUs.id} variant={"solid"} color={"primary"} className="custom-btn font-bold text-xl">
-                                 {contactUs.label}
-                             </Button>
-                         </div>
-                     </div>
-                 </Parallax>
+                 <MyParallax />
              </div>
          </div>
          <div className="flex flex-col bg-black">

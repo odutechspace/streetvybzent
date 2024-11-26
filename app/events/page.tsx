@@ -1,7 +1,9 @@
 import Introduction from "@/app/events/sections/Introduction";
 import EventCard from "@/components/card/EventCard";
+import events from "@/data/events.json";
 
 const Events = () => {
+
     return (
         <>
             <Introduction imageURL="/events/events-bg.png">
@@ -9,11 +11,11 @@ const Events = () => {
             </Introduction>
             <div className="xy-pad bg-footer_bg flex justify-center">
                 <div className="flex flex-col gap-6 w-full max-w-[1200px] text-white/85">
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
+                    {
+                        events.map(event =>
+                            <EventCard key={event.id} {...event} />
+                        )
+                    }
                 </div>
             </div>
         </>

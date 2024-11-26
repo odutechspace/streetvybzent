@@ -3,25 +3,26 @@
 import {useEffect, useRef, useState} from "react";
 
 import TimeCard from "@/components/card/TimeCard";
-import {remainingTime} from "@/_helpers/TimeLeft";
+import {remainingTime} from "@/_helpers/TimeUtil";
 
-const TimePending = () => {
-    const eventDateSample: Date = new Date("Nov 25, 2024 23:00:00");
 
-    eventDateSample.setHours(0, 0, 0, 0);
-    const [timeData, updateTimeData] = useState<any>(remainingTime(eventDateSample));
+const TimePending = (
+    {year=0, month=0, day=0, hour=0, minute=0, second=0}:
+        { year?: number, month?: number, day?: number, hour?: number, minute?: number, second?: number }
+) => {
+    const eventDate: Date = new Date(year, month, day, hour, minute, second);
+
+    const [timeData, updateTimeData] = useState<any>(remainingTime(eventDate));
     const countdownTimer = useRef<any>();
 
     useEffect(() => {
-        // Clear interval if it exists
         if (countdownTimer.current) {
             clearInterval(countdownTimer.current);
         }
 
-        // Start interval
         countdownTimer.current = setInterval(() => {
             updateTimeData(() => {
-                const updatedTime = remainingTime(eventDateSample);
+                const updatedTime = remainingTime(eventDate);
 
                 if (updatedTime.totalSeconds <= 0) {
                     clearInterval(countdownTimer.current!);
@@ -38,7 +39,7 @@ const TimePending = () => {
                 clearInterval(countdownTimer.current);
             }
         };
-    }, [eventDateSample]);
+    }, [eventDate]);
 
   return (
       <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4 w-fit">

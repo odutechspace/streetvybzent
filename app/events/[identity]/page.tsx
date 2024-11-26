@@ -10,6 +10,7 @@ import EventDetailsItemCard from "@/components/card/EventDetailsItemCard";
 import events from "@/data/events.json";
 import {monthIndexToNameMapper} from "@/_helpers/TimeUtil";
 import {EventData, EventDate} from "@/components/card/EventCard";
+import Footer from "@/components/UI/Footer";
 
 
 const Events = ({params: {identity}} : { params: { identity: string }}) => {
@@ -25,9 +26,9 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                     <TimePending {...selectedEvent?.date}/>
                 </div>
             </Introduction>
-            <div className="xy-pad flex justify-center bg-gray_bg">
-                <div className="max-width w-full flex flex-col lg:flex-row gap-6">
-                    <div className="rounded-md overflow-hidden flex flex-col gap-6 w-full lg:w-3/5 order-2 lg:order-1">
+            <div className="xy-pad--2  flex justify-center bg-gray_bg">
+                <div className="max-width py-20 sm:py-0 w-full flex flex-col lg:flex-row gap-6">
+                    <div className="sm:rounded-md overflow-hidden flex flex-col gap-6 w-full lg:w-3/5 order-2 lg:order-1">
                         <div className="flex flex-col bg-white">
                             <Image src="/events/events-samp2.png" alt="bg-image" width={1000} height={1000} className="w-full h-auto object-cover" />
                             <div className="flex flex-col gap-6 p-6">
@@ -42,7 +43,7 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="rounded-md bg-white">
+                        <div className="sm:rounded-md bg-white">
                             <div className="p-6 border-b-1 border-b-gray_primary/20">
                                 <p className="text-xl font-bold">Gallery</p>
                             </div>
@@ -85,7 +86,7 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col rounded-md w-full lg:w-2/5 bg-white order-1 lg:order-2">
+                    <div className="flex flex-col sm:rounded-md h-fit w-full lg:w-2/5 bg-white order-1 lg:order-2">
                         <div className="p-6 border-b-1 border-b-gray_primary/20">
                             <p className="text-xl font-bold">Event Details</p>
                         </div>

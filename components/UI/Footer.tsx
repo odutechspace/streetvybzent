@@ -27,7 +27,7 @@ const Footer = () => {
                     width: "100%",
                     minWidth: "1580px"
                 }}
-                strength={150}
+                strength={100}
                 blur={1}>
                 <div className="relative w-full">
                     <div className="absolute  h-full bg-secondary/55 z-10 left-[-1000px] right-[-1000px]"/>
@@ -36,8 +36,8 @@ const Footer = () => {
                         <h2 className="text-5xl lg:text-6xl xl:text-7xl font-title">{"Let's"} Start This Party</h2>
                         <p className="text-lg md:text-2xl font-bold">Contact Us Today & Experience The Streetvybz
                             Entertainment Difference.</p>
-                        <Button key={contactUs.id} variant={"solid"} color={"primary"}
-                                className="custom-btn font-bold text-xl">
+                        <Button as={Link} key={contactUs.id} variant={"solid"} color={"primary"}
+                                className="custom-btn font-bold text-xl" href={contactUs.href}>
                             {contactUs.label}
                         </Button>
                     </div>
@@ -45,9 +45,6 @@ const Footer = () => {
             </Parallax>
             )
     };
-
-    useEffect(() => {
-    }, [MyParallax]);
 
   return (
      <footer className="z-20 relative">

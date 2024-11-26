@@ -64,7 +64,7 @@ const IntroSection = () => {
                                 <Input type="text" label="Email" radius={'none'}/>
                                 <Textarea radius={'none'} label="Your message" labelPlacement={'inside'} className="col-span-1 sm:col-span-2"/>
                             </div>
-                            <Button type={'submit'} radius={'none'} color={'primary'}>Submit Message</Button>
+                            <Button type={'submit'} radius={'none'} color={'primary'} className="custom-btn">Submit Message</Button>
                         </form>
                     </div>
                 </div>

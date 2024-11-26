@@ -1,5 +1,3 @@
-'use client'
-
 import {FaLocationDot} from "react-icons/fa6";
 import {MdMapsHomeWork} from "react-icons/md";
 import Image from "next/image";
@@ -9,18 +7,22 @@ import Introduction from "@/app/events/sections/Introduction";
 import TimePending from "@/components/UI/TimePending";
 import SocialsShare from "@/components/UI/SocialsShare";
 import EventDetailsItemCard from "@/components/card/EventDetailsItemCard";
+import events from "@/data/events.json";
+import {monthIndexToNameMapper} from "@/_helpers/TimeUtil";
+import {EventData, EventDate} from "@/components/card/EventCard";
 
 
 const Events = ({params: {identity}} : { params: { identity: string }}) => {
-    console.log("identity: ", identity);
+    const selectedEvent = events.find((event: EventData) => event.id === identity);
+    const {year, month, day}: EventDate = selectedEvent?.date ?? {year: 0, month: 0, day: 0, hour: 0, minute: 0,second: 0};
 
     return (
         <>
             <Introduction imageURL="/events/events-bg.png">
                 <div className="flex flex-col gap-8 py-8">
-                    <h2 className="text-[40px] sm:text-5xl 2xl:text-6xl font-title font-bold text-white/85">TRΔP TOUR</h2>
-                    <p className="text-white/75">23-25 August 2027 @The times center Mahattan New</p>
-                    <TimePending />
+                    <h2 className="text-[40px] sm:text-5xl 2xl:text-6xl font-title font-bold text-white/85">{selectedEvent?.title}</h2>
+                    <p className="text-white/75">{`${day} ${monthIndexToNameMapper(month)} ${year} @${selectedEvent?.location?.venue}`}</p> {/*23 August 2027 @The times center Mahattan New*/}
+                    <TimePending {...selectedEvent?.date}/>
                 </div>
             </Introduction>
             <div className="xy-pad flex justify-center bg-gray_bg">
@@ -29,18 +31,11 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                         <div className="flex flex-col bg-white">
                             <Image src="/events/events-samp2.png" alt="bg-image" width={1000} height={1000} className="w-full h-auto object-cover" />
                             <div className="flex flex-col gap-6 p-6">
-                                <p className="text-medium">
-                                    If you’re looking for a way to enjoy the winter season in style, look no further than the Megeve Winter Party! This glamorous event offers a truly unforgettable experience, with luxurious accommodations, world-class cuisine, and exciting entertainment. Located in the picturesque alpine village of Megeve, this event is the perfect way to escape the hustle and bustle of daily life and enjoy the beauty of the winter season. With its charming chalets, snow-covered streets, and stunning mountain views, Megeve is the perfect setting for a winter getaway.
-                                </p>
-                                <p className="text-medium">
-                                    But it’s not just the location that makes the Megeve Winter Party special – it’s also the incredible lineup of activities and entertainment. From exclusive skiing and snowboarding experiences to live music performances and cocktail parties, there’s something for everyone at this event. Of course, no winter party would be complete without delicious food and drink, and the Megeve Winter Party does not disappoint in this regard. Guests can indulge in gourmet meals prepared by world-renowned chefs, as well as fine wines and other beverages to keep them warm on chilly winter nights.
-                                </p>
-                                <p className="text-medium">
-                                    And with luxurious accommodations available, you can rest and relax in style after a day of skiing, partying, and exploring the charming village of Megeve.
-                                </p>
-                                <p className="text-medium">
-                                    So whether you’re a seasoned skier or just looking for a way to enjoy the winter season in style, the Megeve Winter Party is the perfect event for you. With its stunning location, exciting activities, and delicious cuisine, it’s sure to be a winter getaway you’ll never forget. Don’t miss out – buy your tickets today and get ready to experience the ultimate winter party!
-                                </p>
+                                {
+                                    selectedEvent?.description.map((par, idx) =>
+                                        <p key={idx} className="text-medium">{par}</p>
+                                    )
+                                }
                                 <div className="flex flex-col gap-2">
                                     <p className="text-xl font-bold">Share This Event</p>
                                     <SocialsShare />

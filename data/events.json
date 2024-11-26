@@ -1,0 +1,70 @@
+[
+  {
+    "id": "trap-tour",
+    "title": "TRΔP TOUR",
+    "date": {
+      "year": 2024,
+      "month": 10,
+      "day": 25,
+      "hour": 23,
+      "minute": 37,
+      "second": 50
+    },
+    "location": {
+      "country": "Kenya",
+      "city": "Nairobi",
+      "venue": "Kent-wood Address"
+    },
+    "summary": "Don't land dominion thing face. Whales you after. Divide seas unto days herb. Wherein winged be unto. Our a bring herb. Heaven together. A, blessed upon greater seed. Set Don't. Behold fish make said divided moved air in unto.",
+    "description": [
+      "If you’re looking for a way to enjoy the winter season in style, look no further than the Megeve Winter Party! This glamorous event offers a truly unforgettable experience, with luxurious accommodations, world-class cuisine, and exciting entertainment. Located in the picturesque alpine village of Megeve, this event is the perfect way to escape the hustle and bustle of daily life and enjoy the beauty of the winter season. With its charming chalets, snow-covered streets, and stunning mountain views, Megeve is the perfect setting for a winter getaway.",
+      "But it’s not just the location that makes the Megeve Winter Party special – it’s also the incredible lineup of activities and entertainment. From exclusive skiing and snowboarding experiences to live music performances and cocktail parties, there’s something for everyone at this event. Of course, no winter party would be complete without delicious food and drink, and the Megeve Winter Party does not disappoint in this regard. Guests can indulge in gourmet meals prepared by world-renowned chefs, as well as fine wines and other beverages to keep them warm on chilly winter nights.",
+      "And with luxurious accommodations available, you can rest and relax in style after a day of skiing, partying, and exploring the charming village of Megeve.",
+      "So whether you’re a seasoned skier or just looking for a way to enjoy the winter season in style, the Megeve Winter Party is the perfect event for you. With its stunning location, exciting activities, and delicious cuisine, it’s sure to be a winter getaway you’ll never forget. Don’t miss out – buy your tickets today and get ready to experience the ultimate winter party!"
+    ]
+  },
+  {
+    "id": "beats-bazaar",
+    "title": "Beats Bazaar",
+    "date": {
+      "year": 2024,
+      "month": 11,
+      "day": 15,
+      "hour": 19,
+      "minute": 0,
+      "second": 0
+    },
+    "location": {
+      "country": "United States",
+      "city": "Los Angeles",
+      "venue": "Echo Pavilion"
+    },
+    "summary": "An electrifying music festival featuring beats from renowned DJs and live performances under the California night sky.",
+    "description": [
+      "The Beats Bazaar is a one-of-a-kind music event that blends pulsating rhythms with the energy of the vibrant Los Angeles music scene. Held at the Echo Pavilion, this festival promises a night of unforgettable entertainment, featuring top DJs, live bands, and surprise performances. Dance to heart-thumping beats, savor delicious street food, and immerse yourself in an atmosphere filled with dazzling lights and high energy.",
+      "Whether you're a music enthusiast or just looking for an extraordinary night out, the Beats Bazaar is the place to be. Tickets are selling fast – don’t miss your chance to be part of this epic experience!"
+    ]
+  },
+  {
+    "id": "aurora-festival",
+    "title": "Aurora Festival",
+    "date": {
+      "year": 2025,
+      "month": 1,
+      "day": 10,
+      "hour": 21,
+      "minute": 30,
+      "second": 0
+    },
+    "location": {
+      "country": "Norway",
+      "city": "Tromsø",
+      "venue": "Polar Dome"
+    },
+    "summary": "A magical night celebrating the Northern Lights with music, art, and gourmet cuisine in the Arctic Circle.",
+    "description": [
+      "Experience the ethereal beauty of the Aurora Borealis at the Aurora Festival in Tromsø, Norway. This unique event combines art, culture, and nature in an awe-inspiring celebration of the Arctic. Guests will enjoy live music performances from international artists, interactive light shows inspired by the Northern Lights, and a curated selection of Nordic cuisine prepared by top chefs.",
+      "Set in the stunning Polar Dome, the festival offers an intimate setting to connect with nature and marvel at one of the world’s most spectacular natural phenomena. Bundle up and join us for a night of wonder and magic under the Arctic sky!"
+  ]
+  }
+]

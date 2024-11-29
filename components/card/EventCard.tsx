@@ -54,10 +54,10 @@ const EventCard = ({id, title, date, location, summary}: EventData) => {
                     </div>
                     <p className="text-white/75 text-medium">{summary}</p>
                     <div className="flex flex-row flex-wrap gap-4">
-                        <Button as={Link} href={`events/${id}`} radius={'sm'} size={"sm"} className="custom-btn--2 bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                        <Button as={Link} href={`events/${id}`} radius={'sm'} className="custom-btn--2 bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
                             View Details
                         </Button>
-                        <Button radius={'sm'} size={"sm"} className="custom-btn--2 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                        <Button radius={'sm'} className="custom-btn--2 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
                             Book Tickets
                         </Button>
                     </div>

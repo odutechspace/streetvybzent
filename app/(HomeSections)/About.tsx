@@ -16,7 +16,7 @@ const About = () => {
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full font-title">Who are
                             Streetvybz Entertainment?</h2>
                         </FadeIn>
-                        <FadeIn delay={1} className="tracking-wide">
+                        <FadeIn delay={0.4} className="tracking-wide">
                             Welcome to Street Vybz Entertainment, your one-stop-shop for unforgettable
                             events! {"We're"} a dynamic events management and planning agency specializing in providing
                             top-notch audio-visual services, including sound systems, LED screens, deejays, emcees,
@@ -24,7 +24,7 @@ const About = () => {
                             cater to a wide range of events, from corporate occasions to weddings, graduations, birthday
                             parties, school functions, product launches, and team building activities.
                         </FadeIn>
-                        <FadeIn delay={1.2} className="tracking-wide">
+                        <FadeIn delay={0.6} className="tracking-wide">
                             Our team of experts is dedicated to creating memorable events that exceed your expectations.
                             With a passion for delivering exceptional service and attention to detail, we take care of
                             every aspect of your event, ensuring a seamless and enjoyable experience for you and your

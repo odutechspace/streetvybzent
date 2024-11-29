@@ -31,6 +31,7 @@
 .xy-pad {
     padding: 75px 28px;
 }
+
 .xy-pad--2 {
     padding: 75px 28px;
 }
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-title;
 }
 
-.footer-icons{
+.footer-icons {
     @apply text-4xl hover:text-primary cursor-pointer bg-gray-700 p-2;
 }
 
@@ -72,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     .xy-pad {
         padding: 100px 75px;
     }
+
     .xy-pad--2 {
         padding: 100px 75px;
     }
@@ -101,28 +103,33 @@ a:hover {
     background-color: #ff0000;
     /*box-shadow: 0 0 10px #fb9c07;*/
     border-radius: 0;
-    cursor: pointer !important;
     color: white;
+    @apply font-medium text-lg cursor-pointer;
 }
+
 .custom-btn--2 {
     border-radius: 0;
     cursor: pointer !important;
     color: white;
+
 }
 
 .event--sign {
     font-size: 18px;
 }
+
 div p {
     .event--text-sz {
         font-size: 15px;
     }
 }
+
 @media (min-width: 450px) {
     .event--sign {
         font-size: 14px;
     }
 }
+
 * {
     scroll-behavior: smooth;
 }

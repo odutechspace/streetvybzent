@@ -8,7 +8,7 @@ const About = () => {
             <div className="max-width w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 w-full">
                     <FadeIn className="flex items-center">
-                        <Image src="/home/about/about-us.jpg" alt="about-image" width={600} height={700}
+                        <Image src="/home/about/wedding.png" alt="about-image" width={600} height={700}
                                className="h-auto w-full lg:h-full lg:w-auto object-cover"/>
                     </FadeIn>
                     <div className="flex flex-col gap-5 text-lg">

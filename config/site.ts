@@ -260,7 +260,7 @@ export const siteConfig = {
   links: {
     email: "info@streetvybzent.com",
     phoneNo: "+254705050215",
-    twitter: "https://x.com/StreetVybzEnt",
+    twitter: "https://x.com/Str8VybzEnt",
     facebook:"https://www.facebook.com/StreetVybzEntKe",
     instagram:"https://www.instagram.com/streetvybzentke",
     tiktok: "https://www.tiktok.com/@streetvybzent",

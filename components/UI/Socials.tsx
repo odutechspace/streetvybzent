@@ -9,7 +9,7 @@ const Socials = () => (
         <Link href={socials?.facebook} target={"_blank"}><FaFacebookF /></Link>
         <Link href={socials?.instagram} target={"_blank"}><FaInstagram /></Link>
         <Link href={`tel:${socials?.phoneNo}`} target={"_blank"}><FaPhone /></Link>
-        <Link href={`mailto:${socials?.twitter}`} target={"_blank"}><FaXTwitter /></Link>
+        <Link href={socials?.twitter} target={"_blank"}><FaXTwitter /></Link>
     </div>
 );
 

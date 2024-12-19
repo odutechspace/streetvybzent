@@ -16,7 +16,7 @@ const Sidebar = ({isOpen = false, sidebarHandler} : {isOpen: boolean, sidebarHan
                       <FaXmark onClick={sidebarHandler} className="text-danger hover:text-primary hover:cursor-pointer"/>
                   </div>
                   <div className="px-6 pt-6 flex flex-col gap-5">
-                      <p className="text-2xl font-bold font-title"><span className="text-green-600">Street</span><span className="text-orange-400">Vybz</span><span className="text-red-500"> Ent.</span></p>
+                      <p className="text-2xl font-bold font-title"><span className="text-red-500">Street</span><span className="text-orange-500">Vybz</span><span className="text-green-600"> Ent.</span></p>
                       <nav className="flex flex-col">
                           {
                               siteConfig.navItems.map(option =>

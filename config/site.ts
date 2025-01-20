@@ -3,13 +3,13 @@ export const siteConfig = {
     {
       id: 0,
       label: "Home",
-      href: "/",
+      href: "/#",
       isBtn: false
     },
     {
       id: 1,
-      label: "Entertainment",
-      href: "/entertainment",
+      label: "Services",
+      href: "/#services",
       subItems: [
         {
           id: 0,
@@ -74,8 +74,8 @@ export const siteConfig = {
     },
     {
       id: 2,
-      label: "Corporate Events",
-      href: "/",
+      label: "DJ and MC Hire",
+      href: "/services/sound",
       isBtn: false,
       subItems: [
         {
@@ -146,13 +146,13 @@ export const siteConfig = {
     {
       id: 3,
       label: "About Us",
-      href: "/about",
+      href: "/#about",
       isBtn: false
     },
     {
       id: 4,
-      label: "Lighting and Effects",
-      href: "/",
+      label: "Event Lighting",
+      href: "/services/event-lighting",
       isBtn: false,
       subItems: [
         {
@@ -233,8 +233,8 @@ export const siteConfig = {
     },
     {
       id: 5,
-      label: "Our Events",
-      href: "/our-events",
+      label: "Events",
+      href: "/events",
       isBtn: false,
       subItems: [
         {
@@ -253,14 +253,14 @@ export const siteConfig = {
     {
       id: 6,
       label: "Contact Us",
-      href: "/contact",
+      href: "/contact-us",
       isBtn: true,
     }
   ],
   links: {
     email: "info@streetvybzent.com",
     phoneNo: "+254705050215",
-    twitter: "https://x.com/StreetVybzEnt",
+    twitter: "https://www.x.com/Str8VybzEnt",
     facebook:"https://www.facebook.com/StreetVybzEntKe",
     instagram:"https://www.instagram.com/streetvybzentke",
     tiktok: "https://www.tiktok.com/@streetvybzent",

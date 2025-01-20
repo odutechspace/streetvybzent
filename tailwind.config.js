@@ -15,10 +15,12 @@ module.exports = {
       },
       colors: {
         primary: "#e3ad65",
+        primary_red: "#FF0000",
         secondary: "#000",
         primary_text: "#CCCCCC",
         gray_primary: "#777777",
-        footer_bg: "#171616"
+        gray_bg: "#F6F6F6",
+        footer_bg: "#111111"
       },
       keyframes: {
         fadeIn: {

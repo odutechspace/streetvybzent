@@ -32,12 +32,31 @@
     padding: 75px 28px;
 }
 
+.xy-pad--2 {
+    padding: 75px 28px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply font-title;
 }
 
-.footer-icons{
-    @apply text-5xl border border-green-500 p-2 hover:text-green-500 cursor-pointer;
+.footer-icons {
+    @apply text-4xl hover:text-primary cursor-pointer bg-gray-700 p-2;
+}
+
+.event-share-icons {
+    @apply text-2xl text-gray-700 hover:text-white/85 rounded-md hover:bg-primary cursor-pointer bg-gray-700/20 p-2;
+}
+
+
+.sidebar-icon-cont a {
+    @apply text-sm hover:text-primary cursor-pointer bg-gray-400 p-2 text-white;
+}
+
+@media (max-width: 648px) {
+    .xy-pad--2 {
+        padding: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -52,6 +71,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .xy-pad {
+        padding: 100px 75px;
+    }
+
+    .xy-pad--2 {
         padding: 100px 75px;
     }
 }
@@ -76,9 +99,37 @@ a:hover {
 /*#CC3636 Red*/
 
 .custom-btn {
-    background-color: #FFE9A0;
+    /*background-color: #FFE9A0;*/
+    background-color: #ff0000;
     /*box-shadow: 0 0 10px #fb9c07;*/
-    border-radius: 0px;
-    color: #000;
+    border-radius: 0;
+    color: white;
+    @apply font-medium text-lg cursor-pointer;
+}
+
+.custom-btn--2 {
+    border-radius: 0;
     cursor: pointer !important;
+    color: white;
+
+}
+
+.event--sign {
+    font-size: 18px;
+}
+
+div p {
+    .event--text-sz {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 450px) {
+    .event--sign {
+        font-size: 14px;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
 }

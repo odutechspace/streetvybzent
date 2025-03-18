@@ -19,7 +19,8 @@ interface Service {
         description: string[]
     }[]
 }
-const Service = ({params: { identity } } : { params: { identity: string } }) => {
+const Service = async ({params,}: { params: Promise<{ identity: string }>; }) => {
+    const { identity } = await params;
     const service: Service = services.find((service: Service) => service.id === identity) ?? services[0];
     const images: string[] = service?.images ? service.images : [];
     const serviceItems: any = images.length === 0 ? service.serviceItems : new Array(1);

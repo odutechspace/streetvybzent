@@ -264,5 +264,8 @@ export const siteConfig = {
     facebook:"https://www.facebook.com/StreetVybzEntKe",
     instagram:"https://www.instagram.com/streetvybzentke",
     tiktok: "https://www.tiktok.com/@streetvybzent",
+  },
+  shareLinks: {
+
   }
 };

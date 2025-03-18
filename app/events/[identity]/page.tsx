@@ -79,7 +79,7 @@ const Events = async ({params,}: { params: Promise<{ identity: string }>; }) => 
                                                src="/events/upcoming/babadogo-event-2.jpeg" alt=""/>
                                     </div>
                                 </div>
-                                <div className="grid gap-2 col-span-2">
+                                <div className="grid gap-2 md:col-span-2">
                                     <InstagramEmbed link="https://www.instagram.com/reel/DHLdWTSIWT3/"/>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ const Events = async ({params,}: { params: Promise<{ identity: string }>; }) => 
                         <div className="p-6">
                             <div className="flex flex-col">
                                 <EventDetailsItemCard title={"Date"}
-                                                      value={`${monthIndexToNameMapper(month)} ${day}, ${year} ${hour > 12 && hour - 12}:${minute} ${hour > 11 ? "pm" : "am"}`}
+                                                      value={`${monthIndexToNameMapper(month)} ${day}, ${year} ${hour > 12 && hour - 12}:${minute > 9 ? minute : `0${minute}`} ${hour > 11 ? "pm" : "am"}`}
                                                       Icon={FaRegCalendarAlt}/>
                                 <EventDetailsItemCard title={"Location"} value={`${city}, ${country}`}
                                                       Icon={FaLocationDot}/>

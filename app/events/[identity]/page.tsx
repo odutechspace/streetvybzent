@@ -14,10 +14,18 @@ import InstagramEmbed from "@/components/card/InstagramEmbed";
 import {Button} from "@nextui-org/button";
 import Link from "next/link";
 
+const Events = async ({params,}: { params: Promise<{ identity: string }>; }) => {
+    const { identity } = await params;
 
-const Events = ({params: {identity}} : { params: { identity: string }}) => {
     const selectedEvent = events.find((event: EventData) => event.id === identity);
-    const {year, month, day, hour, minute}: EventDate = selectedEvent?.date ?? {year: 0, month: 0, day: 0, hour: 0, minute: 0,second: 0};
+    const {year, month, day, hour, minute}: EventDate = selectedEvent?.date ?? {
+        year: 0,
+        month: 0,
+        day: 0,
+        hour: 0,
+        minute: 0,
+        second: 0
+    };
     const {country, city, venue}: EventLocation = selectedEvent?.location ?? {country: "N/A", city: "N/A", venue: "N/A"}
 
     return (
@@ -31,21 +39,25 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
             </Introduction>
             <div className="xy-pad--2  flex justify-center bg-gray_bg">
                 <div className="max-width py-20 sm:py-0 w-full flex flex-col lg:flex-row gap-6">
-                    <div className="sm:rounded-md overflow-hidden flex flex-col gap-6 w-full lg:w-3/5 order-2 lg:order-1">
+                    <div
+                        className="sm:rounded-md overflow-hidden flex flex-col gap-6 w-full lg:w-3/5 order-2 lg:order-1">
                         <div className="flex flex-col bg-white">
-                            <Image src="/events/upcoming/babadogo-event-bg.png" alt="bg-image" width={1000} height={1000} className="w-full h-auto object-cover" />
+                            <Image src="/events/upcoming/babadogo-event-bg.png" alt="bg-image" width={1000}
+                                   height={1000} className="w-full h-auto object-cover"/>
                             <div className="flex flex-col gap-6 p-6">
                                 {
                                     selectedEvent?.description.map((par, idx) =>
                                         <p key={idx} className="text-medium">{par}</p>
                                     )
                                 }
-                                <Button radius={'sm'} as={Link} target="_blank" href="https://streetvybzent.hustlesasa.shop/" className="custom-btn--1 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                                <Button radius={'sm'} as={Link} target="_blank"
+                                        href="https://streetvybzent.hustlesasa.shop/"
+                                        className="custom-btn--1 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
                                     Book Tickets
                                 </Button>
                                 <div className="flex flex-col gap-2">
                                     <p className="text-xl font-bold">Share This Event</p>
-                                    <SocialsShare />
+                                    <SocialsShare/>
                                 </div>
                             </div>
                         </div>
@@ -56,13 +68,15 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-6">
                                 <div className="grid gap-2">
                                     <div>
-                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md" src="/events/upcoming/babadogo-event-1.jpeg" alt="" />
+                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md"
+                                               src="/events/upcoming/babadogo-event-1.jpeg" alt=""/>
                                     </div>
                                 </div>
 
                                 <div className="grid gap-2">
                                     <div>
-                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md" src="/events/upcoming/babadogo-event-2.jpeg" alt="" />
+                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md"
+                                               src="/events/upcoming/babadogo-event-2.jpeg" alt=""/>
                                     </div>
                                 </div>
                                 <div className="grid gap-2 col-span-2">
@@ -78,12 +92,17 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                         <div className="p-6">
                             <div className="flex flex-col">
                                 <EventDetailsItemCard title={"Date"}
-                                                      value={`${monthIndexToNameMapper(month)} ${day}, ${year} ${hour > 12 && hour-12}:${minute} ${hour > 11 ? "pm" : "am"}`}
+                                                      value={`${monthIndexToNameMapper(month)} ${day}, ${year} ${hour > 12 && hour - 12}:${minute} ${hour > 11 ? "pm" : "am"}`}
                                                       Icon={FaRegCalendarAlt}/>
-                                <EventDetailsItemCard title={"Location"} value={`${city}, ${country}`} Icon={FaLocationDot}/>
+                                <EventDetailsItemCard title={"Location"} value={`${city}, ${country}`}
+                                                      Icon={FaLocationDot}/>
                                 <EventDetailsItemCard title={"Venue"} value={venue} Icon={MdMapsHomeWork}/>
-                                <EventDetailsItemCard title={"Single ticket"} value={`Ksh. ${selectedEvent?.tickets?.single}`} Icon={FaMoneyCheckAlt} isLast={false}/>
-                                <EventDetailsItemCard title={"Ticket for 2"} value={`Ksh. ${selectedEvent?.tickets?.double},   [Redeemable for 5.8 Gin Mzinga]`} Icon={FaMoneyCheckAlt} isLast={true}/>
+                                <EventDetailsItemCard title={"Single ticket"}
+                                                      value={`Ksh. ${selectedEvent?.tickets?.single}`}
+                                                      Icon={FaMoneyCheckAlt} isLast={false}/>
+                                <EventDetailsItemCard title={"Ticket for 2"}
+                                                      value={`Ksh. ${selectedEvent?.tickets?.double},   [Redeemable for 5.8 Gin Mzinga]`}
+                                                      Icon={FaMoneyCheckAlt} isLast={true}/>
                             </div>
                         </div>
                     </div>

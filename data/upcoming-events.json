@@ -1,0 +1,31 @@
+[
+  {
+    "id": "Caribbean-Connect",
+    "title": "CΔRIBBEΔN CONNECT",
+    "date": {
+      "year": 2025,
+      "month": 2,
+      "day": 29,
+      "hour": 17,
+      "minute": 0,
+      "second": 0
+    },
+    "tickets": {
+      "single": 600,
+      "double": 3000
+    },
+    "location": {
+      "country": "Kenya",
+      "city": "Nairobi",
+      "venue": "KO bar, Spectrum Business Park, Go Down 58 Baba Dogo",
+      "theme": "Jersey Edition"
+    },
+    "summary": "Get ready for the ultimate street party experience! Whether you’re a party beast or just looking for good times, KO Bar, Spectrum Business Park, Baba Dogo is the place to be. Jersey up and show out! Expect non-stop entertainment, from top-tier DJs dropping the hottest Amapiano, Afrobeats, and Kenyan anthems, to an exclusive drinks experience. Whether you're here to turn up or just enjoy the night with friends, this is the event for you!",
+    "description": [
+      "Step into an unforgettable night of entertainment, energy, and pure vibes! The event will be hosted at an exciting venue, offering an open dance floor, top-notch sound, and lighting that keeps the energy high from start to finish. Whether you’re looking to enjoy a well-mixed cocktail or hit the dance-floor, you’ll be in for a night like no other.",
+      "This isn't just another party – it’s an experience. The event will feature back-to-back DJ sets spinning the latest hits, ensuring that the tempo stays high all night long. Expect an epic mix of genres, from pulsating Afrobeats to electrifying House and Amapiano, setting the perfect mood for an unforgettable night.",
+      "Guests will have access to a selection of food and drinks, with exclusive offers on signature cocktails and premium beverages. Special themed décor and a lively crowd will make this a night to remember. Be sure to dress according to the theme and get ready to vibe all night.",
+      "With an electrifying lineup, an unbeatable atmosphere, and a community of party lovers ready to go all in, this is the event you don’t want to miss. Grab your tickets now and come experience an epic night filled with music, energy, and unforgettable moments!"
+    ]
+  }
+]

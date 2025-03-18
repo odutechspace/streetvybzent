@@ -7,9 +7,12 @@ import Introduction from "@/app/events/sections/Introduction";
 import TimePending from "@/components/UI/TimePending";
 import SocialsShare from "@/components/UI/SocialsShare";
 import EventDetailsItemCard from "@/components/card/EventDetailsItemCard";
-import events from "@/data/events.json";
+import events from "@/data/upcoming-events.json";
 import {monthIndexToNameMapper} from "@/_helpers/TimeUtil";
 import {EventData, EventDate, EventLocation} from "@/components/card/EventCard";
+import InstagramEmbed from "@/components/card/InstagramEmbed";
+import {Button} from "@nextui-org/button";
+import Link from "next/link";
 
 
 const Events = ({params: {identity}} : { params: { identity: string }}) => {
@@ -30,13 +33,16 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                 <div className="max-width py-20 sm:py-0 w-full flex flex-col lg:flex-row gap-6">
                     <div className="sm:rounded-md overflow-hidden flex flex-col gap-6 w-full lg:w-3/5 order-2 lg:order-1">
                         <div className="flex flex-col bg-white">
-                            <Image src="/events/events-samp2.png" alt="bg-image" width={1000} height={1000} className="w-full h-auto object-cover" />
+                            <Image src="/events/upcoming/babadogo-event-bg.png" alt="bg-image" width={1000} height={1000} className="w-full h-auto object-cover" />
                             <div className="flex flex-col gap-6 p-6">
                                 {
                                     selectedEvent?.description.map((par, idx) =>
                                         <p key={idx} className="text-medium">{par}</p>
                                     )
                                 }
+                                <Button radius={'sm'} as={Link} target="_blank" href="https://streetvybzent.hustlesasa.shop/" className="custom-btn--1 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                                    Book Tickets
+                                </Button>
                                 <div className="flex flex-col gap-2">
                                     <p className="text-xl font-bold">Share This Event</p>
                                     <SocialsShare />
@@ -47,41 +53,20 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                             <div className="p-6 border-b-1 border-b-gray_primary/20">
                                 <p className="text-xl font-bold">Gallery</p>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-6">
                                 <div className="grid gap-2">
                                     <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="" />
+                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md" src="/events/upcoming/babadogo-event-1.jpeg" alt="" />
                                     </div>
                                 </div>
 
                                 <div className="grid gap-2">
                                     <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="" />
+                                        <Image width={500} height={500} className="h-auto max-w-full rounded-md" src="/events/upcoming/babadogo-event-2.jpeg" alt="" />
                                     </div>
                                 </div>
-
-                                <div className="grid gap-2">
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="" />
-                                    </div>
-                                    <div>
-                                        <img className="h-auto max-w-full rounded-md" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="" />
-                                    </div>
+                                <div className="grid gap-2 col-span-2">
+                                    <InstagramEmbed link="https://www.instagram.com/reel/DHLdWTSIWT3/"/>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +82,8 @@ const Events = ({params: {identity}} : { params: { identity: string }}) => {
                                                       Icon={FaRegCalendarAlt}/>
                                 <EventDetailsItemCard title={"Location"} value={`${city}, ${country}`} Icon={FaLocationDot}/>
                                 <EventDetailsItemCard title={"Venue"} value={venue} Icon={MdMapsHomeWork}/>
-                                <EventDetailsItemCard title={"Price"} value={`Ksh. ${selectedEvent?.price}`} Icon={FaMoneyCheckAlt} isLast={true}/>
+                                <EventDetailsItemCard title={"Single ticket"} value={`Ksh. ${selectedEvent?.tickets?.single}`} Icon={FaMoneyCheckAlt} isLast={false}/>
+                                <EventDetailsItemCard title={"Ticket for 2"} value={`Ksh. ${selectedEvent?.tickets?.double},   [Redeemable for 5.8 Gin Mzinga]`} Icon={FaMoneyCheckAlt} isLast={true}/>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,11 @@ export interface EventData {
     id: string,
     title: string,
     date: EventDate,
-    price: number,
+    price?: number,
+    tickets?: {
+        single?: number,
+        double?: number,
+    },
     location: EventLocation,
     summary: string,
     description: string[]
@@ -57,7 +61,7 @@ const EventCard = ({id, title, date, location, summary}: EventData) => {
                         <Button as={Link} href={`events/${id}`} radius={'sm'} className="custom-btn--2 bg-blue-700/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
                             View Details
                         </Button>
-                        <Button radius={'sm'} className="custom-btn--2 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
+                        <Button radius={'sm'} as={Link} target="_blank" href="https://streetvybzent.hustlesasa.shop/" className="custom-btn--2 bg-primary_red/85 text-white font-medium text-lg cursor-pointer hover:bg-footer_bg w-full sm:w-fit">
                             Book Tickets
                         </Button>
                     </div>

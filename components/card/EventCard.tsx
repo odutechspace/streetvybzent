@@ -38,7 +38,7 @@ const EventCard = ({id, title, date, location, summary}: EventData) => {
     return (
         <div className="flex flex-col lg:flex-row justify-between gap-12 bg-white/5 p-4 sm:p-6">
             <div className="h-auto w-full lg:order-2">
-                <Image src="/events/events-samp.jpg" alt="event-bg-image" height={500} width={500} className="h-auto w-full lg:h-full lg:w-auto object-cover" />
+                <Image src="/events/upcoming/babadogo-event-1.jpeg" alt="event-bg-image" height={500} width={500} className="h-auto w-full lg:h-full lg:w-auto object-cover" />
             </div>
             <div className=" flex flex-col gap-6 lg:min-w-[60%] xl:min-w-[65%] lg:order-1">
                 <h2 className="text-2xl md:text-4xl font-title font-medium">{title}</h2>

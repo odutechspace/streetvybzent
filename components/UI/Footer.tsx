@@ -20,7 +20,7 @@ const Footer = React.memo(() => {
         return (
             <Parallax
                 className="flex justify-center object-cover w-full"
-                bgImage="footer/footer-samp-2.jpg"
+                bgImage="/footer/footer-samp-2.jpg"
                 bgImageStyle={{
                     backgroundSize: 'auto 100%',
                     backgroundPosition: 'center bottom',

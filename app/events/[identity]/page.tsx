@@ -13,6 +13,7 @@ import {EventData, EventDate, EventLocation} from "@/components/card/EventCard";
 import InstagramEmbed from "@/components/card/InstagramEmbed";
 import {Button} from "@nextui-org/button";
 import Link from "next/link";
+import TiktokEmbed from "@/components/card/TiktokEmbed";
 
 const Events = async ({params,}: { params: Promise<{ identity: string }>; }) => {
     const { identity } = await params;
@@ -79,8 +80,11 @@ const Events = async ({params,}: { params: Promise<{ identity: string }>; }) => 
                                                src="/events/upcoming/babadogo-event-2.jpeg" alt=""/>
                                     </div>
                                 </div>
-                                <div className="grid gap-2 md:col-span-2">
-                                    <InstagramEmbed link="https://www.instagram.com/reel/DHLdWTSIWT3/"/>
+                                <div className="grid gap-2">
+                                    <InstagramEmbed link="https://www.instagram.com/reel/DHLdWTSIWT3/" />
+                                </div>
+                                <div className="grid gap-2">
+                                    <TiktokEmbed link="https://www.tiktok.com/@streetvybzent/video/7483158449996549381" />
                                 </div>
                             </div>
                         </div>

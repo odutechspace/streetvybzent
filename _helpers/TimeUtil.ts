@@ -33,6 +33,9 @@ export const remainingTime = (eventDate: Date) => {
    if (difference > 0) {
        timeLeft.weeks =  Math.floor(difference / (1000 * 60 * 60 * 24 * 7));
        timeLeft.days = Math.floor(difference / (1000 * 60 * 60 * 24));
+       if (timeLeft.days >= 7) {
+           timeLeft.days = timeLeft.days - (timeLeft.weeks * 7);
+       }
        timeLeft.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
        timeLeft.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
        timeLeft.seconds = Math.floor((difference % (1000 * 60)) / 1000);

@@ -1,7 +1,7 @@
 'use client'
 
 import {useEffect, useState} from "react";
-import {RotatingLines} from "react-loader-spinner";
+import {MoonLoader} from "react-spinners";
 
 const InstagramEmbed = ({link = ""}: {link: string}) => {
     const [loading, setLoading] = useState(true);
@@ -26,7 +26,11 @@ const InstagramEmbed = ({link = ""}: {link: string}) => {
             {
                 loading &&
                 <div className="flex justify-center items-center w-full h-[300px] bg-zinc-100 rounded-md ">
-                    <RotatingLines />
+                    <MoonLoader
+                        color="#e3ad65"
+                        loading
+                        size={35}
+                    />
                 </div>
             }
             <blockquote

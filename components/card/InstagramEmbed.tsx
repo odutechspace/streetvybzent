@@ -26,7 +26,7 @@ const InstagramEmbed = ({link = ""}: {link: string}) => {
             {
                 loading &&
                 <div className="flex justify-center items-center w-full h-[300px] bg-zinc-100 rounded-md ">
-                    <RotatingLines strokeColor="#e3ad65" height="50" width="50"/>
+                    <RotatingLines />
                 </div>
             }
             <blockquote
